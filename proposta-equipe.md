@@ -91,7 +91,20 @@ O Atacadão também opera fora do Brasil por meio de lojas físicas e parcerias 
 - **França** — primeira loja inaugurada em 2024 em Aulnay-sous-Bois
 - **Argentina, Romênia, Tunísia, Egito e Espanha** — operações sob as bandeiras Carrefour Cash & Carry, Supeco e Carrefour Maxi
 
-## 7. Geração de Indicadores
+## 7. Usuários do Sistema
+
+O sistema será utilizado pelos seguintes perfis dentro da rede Atacadão:
+
+| Perfil | Função |
+|--------|--------|
+| **Operador de Caixa** | Registra vendas CPF e CNPJ no PDV, acionando a baixa no estoque |
+| **Estoquista** | Realiza recebimento de mercadorias, contagem de inventário, registro de perdas e ajustes de saldo |
+| **Comprador** | Acessa sugestões de compra baseadas no histórico, aprova e emite pedidos aos fornecedores |
+| **Gerente de Loja** | Monitora saldo em tempo real, aprova transferências, acompanha indicadores da unidade |
+| **Logística** | Gerencia movimentação entre depósitos e filiais, rastreia cargas em trânsito |
+| **Diretoria** | Visualiza indicadores consolidados de todas as unidades (giro, ruptura, ticket médio) |
+
+## 8. Geração de Indicadores
 
 - Giro de estoque
 - Produtos mais vendidos (por cliente CPF e CNPJ)
@@ -99,7 +112,7 @@ O Atacadão também opera fora do Brasil por meio de lojas físicas e parcerias 
 - Ticket médio por tipo de cliente
 - Valor total em estoque
 
-## 8. Tecnologias Sugeridas
+## 9. Tecnologias Sugeridas
 
 | Camada | Tecnologia |
 |--------|-----------|
@@ -108,6 +121,6 @@ O Atacadão também opera fora do Brasil por meio de lojas físicas e parcerias 
 | Banco de Dados | PostgreSQL |
 | Mobile | React Native (para inventário) |
 
-## 9. Observações
+## 10. Observações
 
 ...
