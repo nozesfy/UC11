@@ -85,6 +85,12 @@ Empresas que utilizam os produtos como insumo (ex.: confeitarias, lanchonetes, i
 #### Grandes Lojistas e Empresas
 Atendidos pelo formato de **atacado de entrega** (central de distribuição), com entregas programadas e condições comerciais negociadas.
 
+### Cliente Internacional
+O Atacadão também opera fora do Brasil por meio de lojas físicas e parcerias do Grupo Carrefour, atendendo clientes nos seguintes países:
+- **Marrocos** — 11 lojas em Casablanca, Marraquexe, Rabat, entre outras
+- **França** — primeira loja inaugurada em 2024 em Aulnay-sous-Bois
+- **Argentina, Romênia, Tunísia, Egito e Espanha** — operações sob as bandeiras Carrefour Cash & Carry, Supeco e Carrefour Maxi
+
 ## 7. Geração de Indicadores
 
 - Giro de estoque
