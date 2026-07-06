@@ -1,6 +1,6 @@
 # História do Atacadão
 
-_Fonte: [Wikipédia](https://pt.wikipedia.org/wiki/Atacad%C3%A3o)_
+_Fonte: [Wikipédia](https://pt.wikipedia.org/wiki/Atacad%C3%A3o) — Dados atualizados até 23 de abril de 2026_
 
 ## Visão Geral
 
