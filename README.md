@@ -14,11 +14,16 @@ Este repositório contém a documentação e os artefatos do projeto de moderniz
 - Vendas (CPF e CNPJ) com processos distintos
 - Falta de indicadores gerenciais
 
-## Equipes
+## Equipe
 
-Quatro equipes de desenvolvimento atuam como consultorias de software, propondo soluções para os desafios listados.
+- **William**
+- **Alaide**
+- **Ed**
 
 ## Estrutura
 
 - `ATIVIDADE.md` — descrição detalhada do problema
+- `historia-atacadao.md` — história e perfil do Atacadão
+- `proposta-equipe.md` — proposta conceitual da solução
+- `levantamento-requisitos.md` — requisitos funcionais e não funcionais
 - `CHANGELOG.md` — histórico de alterações do projeto
