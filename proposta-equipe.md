@@ -121,6 +121,12 @@ O sistema será utilizado pelos seguintes perfis dentro da rede Atacadão:
 | Banco de Dados | PostgreSQL |
 | Mobile | React Native (para inventário) |
 
-## 10. Observações
+## 10. Créditos
+
+- **William**
+- **Alaide**
+- **Ed**
+
+## 11. Observações
 
 ...
