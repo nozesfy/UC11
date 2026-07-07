@@ -1,0 +1,3 @@
+1. **Não aceitaria.** Desenvolver sem conversar com o cliente é construir suposições — o risco de entregar algo que ninguém quer é altíssimo. O cliente é a única fonte confiável das regras de negócio, prioridades e expectativas. Sem ele, o time age no escuro.
+
+2. **O resultado típico é retrabalho e insatisfação.** Funcionalidades irrelevantes, lacunas críticas não percebidas, integrações erradas e, no pior caso, o sistema inteiro descartado. O "software funciona tecnicamente mas não resolve o problema real" é um dos maiores desperdícios em TI — exatamente o oposto do que a gestão de estoque do Atacadão busca evitar.

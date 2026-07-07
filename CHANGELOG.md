@@ -5,6 +5,7 @@
 ### Adicionado
 
 - 1ª microentrega (`microentrega-1.md`) com visão do cliente, problema, usuários e organização da equipe
+- Reflexão sobre desenvolvimento sem contato com o cliente (`reflexao-1.md`)
 
 ### Alterado
 
