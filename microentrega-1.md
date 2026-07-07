@@ -9,3 +9,7 @@ Operador de Caixa, Estoquista, Comprador, Gerente de Loja, Logística e Diretori
 
 **Como organizaremos nossa equipe para conduzir esse projeto?**
 Equipe multidisciplinar com 3 membros (William, Alaide, Ed), atuando como consultoria de software. Organização em sprints com entregas incrementais, iniciando pelo levantamento de requisitos e proposta conceitual, seguido por prototipação, desenvolvimento e validação com o cliente.
+
+William - FRON-END  e Banco de dados
+Alaide - Documentação
+Ed - BACK-END e DevOps

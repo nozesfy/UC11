@@ -11,6 +11,7 @@
 
 - Especificação da regularidade no abastecimento para clientes transformadores na proposta
 - Reflexão revisada com nova perspectiva acadêmica (`reflexao-1.md`)
+- Microentrega 1 atualizada com divisão de papéis da equipe
 
 ## [1.1.0] — 2026-07-06
 
