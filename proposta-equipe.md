@@ -79,7 +79,7 @@ Mercados, mercearias, padarias e restaurantes que compram para revenda direta.
 #### Transformadores
 Empresas que utilizam os produtos como insumo (ex.: confeitarias, lanchonetes, indústrias alimentícias).
 - Compram em maior volume
-- Necessitam de regularidade no abastecimento
+- Necessitam de entregas programadas em intervalo fixo (ex.: semanal, quinzenal) e volume consistente por pedido, pois o produto é insumo de produção contínua
 - Preço diferenciado por categoria
 
 #### Grandes Lojistas e Empresas

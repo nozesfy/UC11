@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1] — 2026-07-07
+
+### Alterado
+
+- Especificação da regularidade no abastecimento para clientes transformadores na proposta
+- Adicionado `.gitignore` com `AGENTS.md`
+- Adicionado `AGENTS.md`
+
 ## [1.1.0] — 2026-07-06
 
 ### Adicionado
