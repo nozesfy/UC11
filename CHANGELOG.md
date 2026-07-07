@@ -10,8 +10,6 @@
 ### Alterado
 
 - Especificação da regularidade no abastecimento para clientes transformadores na proposta
-- Adicionado `.gitignore` com `AGENTS.md`
-- Adicionado `AGENTS.md`
 - Reflexão revisada com nova perspectiva acadêmica (`reflexao-1.md`)
 
 ## [1.1.0] — 2026-07-06
