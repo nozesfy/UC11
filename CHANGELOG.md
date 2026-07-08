@@ -6,6 +6,8 @@
 
 - 1ª microentrega (`microentrega-1.md`) com visão do cliente, problema, usuários e organização da equipe
 - Reflexão sobre desenvolvimento sem contato com o cliente (`reflexao-1.md`)
+- Sprint de visão do usuário (`sprint-visao-usuario.md`)
+- Personas de todos os perfis do sistema (`personas.md`)
 
 ### Alterado
 
