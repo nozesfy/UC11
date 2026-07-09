@@ -11,6 +11,7 @@
 - Entrega final da sprint de visão do usuário (`entrega-final-sprint.md`)
 - Product Book da Sprint 3 (`product-book-sprint3.md`)
 - Pastas individuais william/, alaide/, ed/ com personas, mapas de empatia e requisitos individuais
+- Ajuste para 1 persona por integrante
 
 ### Alterado
 
