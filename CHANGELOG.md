@@ -8,6 +8,7 @@
 
 ### Alterado
 
+- Individualização dos requisitos por integrante
 - Ajuste para 1 persona por integrante
 - Data do changelog corrigida
 
