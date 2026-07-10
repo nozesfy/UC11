@@ -32,3 +32,12 @@
 
 3. **As transferências interestaduais exigem prazos fiscais específicos?**
    > Movimentações entre estados envolvem ICMS e prazos de NF-e que o sistema de rastreio precisa contemplar.
+
+---
+
+## Fonte
+
+- Google Play — Meu Atacadão (funcionalidades do app B2C)
+- Atacadão S.A. — site oficial e Group Carrefour Brasil
+- Times Brasil | CNBC — reportagem sobre integração do ERP do Atacadão
+- Documentos do projeto: levantamento de requisitos, personas e mapa de empatia

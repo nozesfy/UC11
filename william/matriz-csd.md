@@ -32,3 +32,12 @@
 
 3. **O sistema legado tem API de integração com o PDV?**
    > Para conectar o PDV ao estoque e à emissão fiscal, o sistema antigo precisa expor interfaces de comunicação.
+
+---
+
+## Fonte
+
+- Google Play — Meu Atacadão (funcionalidades do app B2C)
+- Atacadão S.A. — site oficial e Group Carrefour Brasil
+- Times Brasil | CNBC — reportagem sobre integração do ERP do Atacadão
+- Documentos do projeto: levantamento de requisitos, personas e mapa de empatia

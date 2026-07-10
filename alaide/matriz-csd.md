@@ -32,3 +32,12 @@
 
 3. **Haverá resistência dos estoquistas à mudança do processo manual?**
    > Uma ferramenta nova exige treinamento e adaptação — é importante prever onboarding e suporte.
+
+---
+
+## Fonte
+
+- Google Play — Meu Atacadão (funcionalidades do app B2C)
+- Atacadão S.A. — site oficial e Group Carrefour Brasil
+- Times Brasil | CNBC — reportagem sobre integração do ERP do Atacadão
+- Documentos do projeto: levantamento de requisitos, personas e mapa de empatia

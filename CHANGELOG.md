@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.7] — 2026-07-10
+
+### Adicionado
+
+- Seção "Fonte" com referências das informações nas matrizes CSD
+
 ## [1.1.6] — 2026-07-10
 
 ### Alterado
