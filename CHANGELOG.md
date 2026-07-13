@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.9] — 2026-07-13
+
+### Alterado
+
+- Matriz CSD dos 3 integrantes unificada para a visão do usuário do app Meu Atacadão, com informações simples e diretas para sala de aula
+
 ## [1.1.8] — 2026-07-10
 
 ### Alterado

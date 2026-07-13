@@ -1,43 +1,42 @@
-# Matriz CSD — William (Front-end e Banco de Dados) | Carlos Silva (Operador de Caixa)
+# Matriz CSD — William
 
 ## Certezas
 
-1. **O sistema trava em horários de pico**
-   > O PDV demora a responder quando o movimento da loja aumenta, gerando filas e clientes insatisfeitos.
+1. **O app Meu Atacadão pode ser baixado de graça no celular**
+   > Está disponível na Google Play para Android e na App Store para iPhone.
 
-2. **Preço CPF/CNPJ não é claro no sistema**
-   > O operador precisa memorizar ou consultar fora do sistema qual preço aplicar — não há indicação visual na tela.
+2. **O app mostra as ofertas e promoções do Atacadão**
+   > Dá para ver o folheto semanal e ativar cupons de desconto direto pelo celular.
 
-3. **Não há consulta de estoque no PDV**
-   > No momento da venda, o operador não consegue ver se o produto tem saldo disponível antes de finalizar a compra.
+3. **O app tem scanner de código de barras**
+   > O cliente pode apontar a câmera para o produto e ver o preço na hora.
 
 ## Suposições
 
-1. **Interface simples reduziria filas no caixa**
-   > Um PDV leve, com poucos cliques por venda, agilizaria o atendimento e melhoraria a experiência do cliente.
+1. **O usuário baixa o app para economizar nas compras**
+   > As ofertas e cupons ajudam a gastar menos no supermercado.
 
-2. **Automação do preço CPF/CNPJ evitaria erros**
-   > Se o sistema identificar automaticamente o tipo de cliente e exibir o preço correto, o operador não precisaria decidir.
+2. **O usuário consulta as ofertas antes de ir à loja**
+   > Assim ele planeja o que comprar e aproveita os descontos.
 
-3. **Consulta de estoque no PDV evitaria vendas sem produto**
-   > Ver o saldo antes de finalizar permitiria ao operador avisar o cliente ou sugerir um similar.
+3. **O usuário usa o scanner para verificar o preço dos produtos**
+   > Durante a compra, ele confere se o valor no caixa está correto.
 
 ## Dúvidas
 
-1. **O hardware do PDV suporta um novo sistema?**
-   > Máquinas antigas podem não rodar um front-end moderno ou integrar com novas bibliotecas.
+1. **O app funciona em qualquer celular?**
+   > Pode ser que celulares muito antigos ou com pouca memória tenham dificuldade para rodar o app.
 
-2. **Qual o volume de transações nos horários de pico?**
-   > Saber o pico de vendas ajuda a dimensionar o banco de dados e a infraestrutura para evitar lentidão.
+2. **As ofertas do app são as mesmas em todas as lojas?**
+   > Nem sempre a promoção que aparece no app está disponível em todas as filiais.
 
-3. **O sistema legado tem API para integrar com o PDV?**
-   > Para conectar o PDV ao estoque e à emissão fiscal, o sistema antigo precisa expor interfaces de comunicação.
+3. **O app atualiza os preços em tempo real?**
+   > O cliente pode ver um preço no scanner e outro diferente no caixa se a atualização for demorada.
 
 ---
 
 ## Fonte
 
-- Google Play — Meu Atacadão (funcionalidades do app B2C)
-- Atacadão S.A. — site oficial e Group Carrefour Brasil
-- Times Brasil | CNBC — reportagem sobre integração do ERP do Atacadão
-- Documentos do projeto: levantamento de requisitos, personas e mapa de empatia
+- Google Play — Meu Atacadão
+- Site oficial do Atacadão
+- Observação do dia a dia

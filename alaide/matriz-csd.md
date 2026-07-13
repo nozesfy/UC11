@@ -1,43 +1,42 @@
-# Matriz CSD — Alaide (Documentação) | Marcos Oliveira (Estoquista)
+# Matriz CSD — Alaide
 
 ## Certezas
 
-1. **O inventário é feito manualmente com papel e caneta**
-   > O estoquista precisa anotar cada item à mão e depois digitar no sistema — processo lento e propenso a erros.
+1. **O app Meu Atacadão pode ser baixado de graça no celular**
+   > Está disponível na Google Play para Android e na App Store para iPhone.
 
-2. **O saldo do sistema diverge do físico**
-   > A diferença entre o que está registrado e o que realmente tem no estoque é recorrente, gerando retrabalho.
+2. **O app mostra as ofertas e promoções do Atacadão**
+   > Dá para ver o folheto semanal e ativar cupons de desconto direto pelo celular.
 
-3. **Não há leitor de código de barras no inventário**
-   > O app Meu Atacadão já tem scanner de preços para o cliente, mas os estoquistas não usam essa tecnologia internamente.
+3. **O app tem scanner de código de barras**
+   > O cliente pode apontar a câmera para o produto e ver o preço na hora.
 
 ## Suposições
 
-1. **App com leitor de código de barras agilizaria a contagem**
-   > O scanner que já existe no app do cliente poderia ser adaptado para acelerar a conferência de estoque.
+1. **O usuário baixa o app para economizar nas compras**
+   > As ofertas e cupons ajudam a gastar menos no supermercado.
 
-2. **Ajuste automático de saldo eliminaria divergências**
-   > O sistema poderia corrigir o saldo em tempo real conforme o estoquista confere os itens.
+2. **O usuário consulta as ofertas antes de ir à loja**
+   > Assim ele planeja o que comprar e aproveita os descontos.
 
-3. **Registro digital de perdas geraria dados confiáveis**
-   > Se o sistema exigir motivo, data e responsável, a diretoria teria insumos para reduzir desperdícios.
+3. **O usuário usa o scanner para verificar o preço dos produtos**
+   > Durante a compra, ele confere se o valor no caixa está correto.
 
 ## Dúvidas
 
-1. **Os celulares dos estoquistas suportam o app?**
-   > O scanner de código de barras exige câmera funcional e processamento mínimo — é preciso verificar o hardware disponível.
+1. **O app funciona em qualquer celular?**
+   > Pode ser que celulares muito antigos ou com pouca memória tenham dificuldade para rodar o app.
 
-2. **O sistema atual tem API para integrar?**
-   > Sem API, o ajuste de saldo teria que ser manual ou via planilha, perdendo a vantagem da automação.
+2. **As ofertas do app são as mesmas em todas as lojas?**
+   > Nem sempre a promoção que aparece no app está disponível em todas as filiais.
 
-3. **Haverá resistência à mudança?**
-   > Uma ferramenta nova exige treinamento e adaptação — é importante prever onboarding e suporte.
+3. **O app atualiza os preços em tempo real?**
+   > O cliente pode ver um preço no scanner e outro diferente no caixa se a atualização for demorada.
 
 ---
 
 ## Fonte
 
-- Google Play — Meu Atacadão (funcionalidades do app B2C)
-- Atacadão S.A. — site oficial e Group Carrefour Brasil
-- Times Brasil | CNBC — reportagem sobre integração do ERP do Atacadão
-- Documentos do projeto: levantamento de requisitos, personas e mapa de empatia
+- Google Play — Meu Atacadão
+- Site oficial do Atacadão
+- Observação do dia a dia
