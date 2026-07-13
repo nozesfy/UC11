@@ -37,6 +37,5 @@
 
 ## Fonte
 
-- Google Play — Meu Atacadão
+- Google Play — Meu Atacadão (https://play.google.com/store/apps/details?id=br.com.atacadao.b2c.app)
 - Site oficial do Atacadão
-- Observação do dia a dia
