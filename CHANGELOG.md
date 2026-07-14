@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.10] — 2026-07-14
+
+### Alterado
+
+- Artefatos coletivos organizados na pasta `coletivos/` (antes estavam soltos na raiz)
+
 ## [1.1.9] — 2026-07-13
 
 ### Alterado
