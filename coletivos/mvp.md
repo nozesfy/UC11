@@ -103,14 +103,14 @@ Entrada de mercadoria → Registro de lote e validade no ERP →
 
 ## Tecnologias
 
-| Camada | Tecnologia |
-|--------|-----------|
-| Frontend | React + TypeScript |
-| Backend | Node.js (API) + Python (ML) |
-| Banco de Dados | PostgreSQL |
-| ML | scikit-learn, pandas, numpy (Isolation Forest para anomalias) |
-| Vizualização | Chart.js / Recharts (dashboard) |
-| Notificação | WebSocket / Push |
+| Camada | Tecnologia | Por quê? |
+|--------|-----------|----------|
+| Frontend | React + TypeScript | Ecossistema maduro, componentes reutilizáveis, tipagem estática para evitar erros em tela |
+| Backend | Node.js (API) + Python (ML) | Node.js para API REST rápida e eficiente; Python para ML porque tem o ecossistema mais robusto (scikit-learn, pandas, numpy) |
+| Banco de Dados | PostgreSQL | Relacional, suporta consultas complexas, dados estruturados de estoque e vendas, amplamente usado no varejo |
+| ML | scikit-learn, pandas, numpy (Isolation Forest para anomalias) | Isolation Forest é eficaz para detecção de anomalias em dados de alta dimensão, bibliotecas leves e bem documentadas |
+| Vizualização | Chart.js / Recharts (dashboard) | Leves, integram bem com React, suportam gráficos interativos em tempo real |
+| Notificação | WebSocket / Push | Alerta em tempo real para o gerente sem necessidade de recarregar página |
 
 ---
 
