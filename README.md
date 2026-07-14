@@ -1,6 +1,10 @@
+# UC11 — Gerir Projetos de Tecnologia da Informação
+
 # Modernização da Gestão de Estoque — Rede de Supermercados Atacadão
 
 ## Sobre o Projeto
+
+Projeto acadêmico da UC11 (Gerir Projetos de TI) do curso Técnico em Desenvolvimento de Sistemas.
 
 Este repositório contém a documentação e os artefatos do projeto de modernização do processo de gestão de estoque de uma rede de supermercados.
 
