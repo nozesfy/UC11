@@ -26,32 +26,7 @@ pie title Distribuição das Perdas no Varejo Brasileiro (ABRAPPE 2025)
 
 O MVP ataca diretamente **55%** dessas perdas: vencimento/validade (35%) e avaria/manuseio (20%), além de detectar anomalias que reduzem furtos (37%) e erros de sistema (8%).
 
----
-
-## Canvas Model — MVP
-
-| Parcerias Principais | Atividades Principais | Proposta de Valor | Relacionamento com Clientes | Segmentos de Clientes |
-|---|---|---|---|---|
-| ERP TOTVS Consinco/RMS (integração) | Monitoramento preditivo de validade | Reduzir perdas por vencimento e avaria | Suporte direto aos gerentes de loja | **Gerentes de Loja** — monitoram perdas e validade |
-| Equipe de TI do Atacadão | Detecção de anomalias em perdas | Evitar multas e TACs (MPDFT) | Notificações em tempo real (push) | **Compradores** — recebem alertas de risco |
-| Fornecedores (troca de lotes próximos ao vencimento) | Sugestão automática de ações | Aumentar margem reduzindo desperdício | Dashboard com heatmap de risco | **Diretoria** — relatórios consolidados |
-| ABRAPPE / Neogrid (dados setoriais) | Geração de relatórios por causa | Detectar fraudes em tempo real | — | **Auditoria / MP** — prestação de contas |
-
-| Recursos Principais | Canais |
-|---|---|
-| Modelo ML (Isolation Forest) — scikit-learn | Dashboard web (React + Chart.js) |
-| Banco PostgreSQL (estoque, vendas, perdas) | Notificação push no celular do gerente |
-| API Node.js + Python (ML) | Relatório mensal automático |
-| Histórico de perdas do ERP TOTVS | — |
-
-| Estrutura de Custos | Fontes de Receita |
-|---|---|
-| Desenvolvimento do MVP | **Redução de custos** — menos perda = mais margem |
-| Infraestrutura (servidores, banco) | **Redução de multas** — TAC MPDFT, ações judiciais |
-| Manutenção do modelo ML | **Aumento de vendas** — menos ruptura por validade |
-| Treinamento dos usuários | **Eficiência operacional** — ganho interno |
-
----
+------
 
 ## 1. Controle de Validade e Prevenção de Perdas
 
