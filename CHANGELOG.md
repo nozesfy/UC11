@@ -4,7 +4,7 @@
 
 ### Adicionado
 
-- MVP com IA integrada (`coletivos/mvp.md`) — documento detalhado com comparação entre sistema atual e sistema com IA para previsão de demanda, sugestão de compras, recomendação no PDV e detecção de anomalias em perdas
+- MVP com IA integrada (`coletivos/mvp.md`) — documento baseado em dados reais do Atacadão com fontes jornalísticas e setoriais (Estadão, MPDFT, ABRAPPE, Neogrid), comparando sistema real atual com proposta do MVP
 
 ## [1.1.10] — 2026-07-14
 
