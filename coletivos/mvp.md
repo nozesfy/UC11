@@ -140,11 +140,11 @@ ERP + ML Previsão → Sugestão de compra inteligente →
 
 ## Fontes
 
-- Estadão — Carrefour admite desabastecimento de carnes em lojas do Atacadão (nov/2024)
-- MPDFT — TAC nº 851/2023 com Atacadão Dia a Dia (atualizado jun/2026)
-- BNews — Atacadão investigado por carnes impróprias em Salvador (mar/2026)
-- ABRAPPE — 9ª Pesquisa de Prevenção de Perdas no Varejo Brasileiro (2025)
-- Neogrid — Índice de Ruptura (abr/mai 2026)
-- Diário do Comércio — Atacadão acelera transformação digital (2025)
-- SA+ — Carrefour inicia unificação do sistema comercial (2026)
-- Blog Atacadão — Cuidar do Estoque é Fundamental (2021)
+- [Estadão — Carrefour admite desabastecimento de carnes em lojas do Atacadão (nov/2024)](https://www.estadao.com.br/economia/agronegocios/carrefour-desabastecimento-carnes-atacadao/)
+- [MPDFT — TAC nº 851/2023 com Atacadão Dia a Dia (atualizado jun/2026)](https://www.gamalivre.com.br/2026/06/mpdft-atualiza-tac-com-rede-de.html)
+- [BNews — Atacadão investigado por carnes impróprias em Salvador (mar/2026)](https://www.bnews.com.br/noticias/salvador/atacadao-e-investigado-pelo-mp-apos-denuncias-de-venda-de-carnes-improprias-em-salvador.html)
+- [ABRAPPE — 9ª Pesquisa de Prevenção de Perdas no Varejo Brasileiro (2025)](https://samais.com.br/publicacoes/perdas-de-r-421-bilhoes-se-o-desperdicio-fosse-uma-empresa-seria-a-4a-maior-do-varejo-alimentar-brasileiro)
+- [Neogrid — Índice de Ruptura (mai/2026)](https://www.cnnbrasil.com.br/agro/ovos-e-cafe-impulsionam-indice-de-ruptura-em-supermercados-em-maio/)
+- [Diário do Comércio — Atacadão acelera transformação digital (2025)](https://dcomercio.com.br/publicacao/s/atacadao-acelera-transformacao-digital-de-olho-na-experiencia-do-cliente)
+- [SA+ — Carrefour inicia unificação do sistema comercial (2026)](https://samais.com.br/publicacoes/carrefour-inicia-unificacao-de-sistemas-e-transfere-sede-para-estruturas-do-atacadao)
+- [Blog Atacadão — Cuidar do Estoque é Fundamental (2021)](https://blog.atacadao.com.br/gestao/cuidar-do-estoque-e-fundamental/)
