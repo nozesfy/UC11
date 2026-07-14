@@ -2,9 +2,9 @@
 
 ## [1.2.0] — 2026-07-14
 
-### Adicionado
+### Alterado
 
-- MVP com IA integrada (`coletivos/mvp.md`) — documento baseado em dados reais do Atacadão com fontes jornalísticas e setoriais (Estadão, MPDFT, ABRAPPE, Neogrid), comparando sistema real atual com proposta do MVP
+- MVP scopo ajustado para **Controle de Validade e Prevenção de Perdas** e **Detecção de Anomalias em Perdas e Fraudes**, removendo previsão de demanda e recomendação no PDV
 
 ## [1.1.10] — 2026-07-14
 

@@ -1,4 +1,4 @@
-# MVP — Central de Inteligência de Estoque (Atacadão)
+# MVP — Controle de Validade e Prevenção de Perdas com IA (Atacadão)
 
 **UC11:** Gerir Projetos de Tecnologia da Informação  
 **Equipe:** William, Alaide, Ed
@@ -7,108 +7,96 @@
 
 ## Visão Geral
 
-MVP de um sistema complementar de inteligência de estoque com IA para a rede Atacadão, acoplado ao ERP existente (TOTVS Consinco/RMS). Foco em reduzir ruptura, perdas por validade e fraudes operacionais.
-
-> **Nota:** O Atacadão já utiliza inteligência de dados para prever demanda e ajustar estoques (fonte: declaração do diretor de TI em 2025). Este MVP propõe funcionalidades específicas não contempladas ou com baixa maturidade na operação atual.
+MVP de um sistema de inteligência artificial para controle de validade, prevenção de perdas e detecção de anomalias na rede Atacadão. Acoplado ao ERP existente (TOTVS Consinco/RMS), o sistema monitora em tempo real o risco de vencimento, sugere ações preventivas e identifica padrões suspeitos de perda.
 
 ---
 
-## 1. Previsão de Demanda
+## 1. Controle de Validade e Prevenção de Perdas
 
 ### Sistema Atual (Real)
-- Atacadão já utiliza algoritmos e IA para prever demanda, ajustar estoques e otimizar rotas (declarado em 2025)
-- ERP TOTVS Consinco/RMS integrado ao PDV com sugestão de compra por giro
-- Comprador ainda aprova manualmente as sugestões geradas pelo sistema
-- Ruptura ainda ocorre: em novembro de 2024, Carrefour admitiu desabastecimento de cortes de carne bovina nas lojas Atacadão (fonte: Estadão)
-- Dados setoriais (Neogrid 2026): ruptura média no varejo alimentar é de 12,4%, com ovos em 28,4% e leite UHT em 20,7%
-
-### Problemas Reais Identificados
-- Previsão atual não considera sazonalidade regional com granularidade fina (ex: feriado municipal, eventos locais)
-- Ruptura em perecíveis de alto giro ainda é crítica (carnes, leite, ovos)
-- Estoques de segurança são calculados de forma genérica, sem ajuste dinâmico por filial
+- MPDFT firmou **TAC nº 851/2023** com o Atacadão Dia a Dia após fiscalização encontrar **113 produtos vencidos** em uma única loja em Samambaia/DF (fonte: MPDFT)
+- Em março de 2026, MP-BA investiga denúncias de venda de carnes impróprias em Salvador, com relatos de:
+  - Substituição de carnes escolhidas por produtos de menor qualidade ou vencidos
+  - Moagem de carnes fora do prazo de validade para vendê-las como novas
+  - Recongelamento de carnes totalmente descongeladas (fonte: BNews)
+- Perdas no varejo brasileiro totalizaram **R$ 42,1 bilhões em 2025**, alta de 15,3% em relação ao ano anterior, o que representa **1,65% do faturamento** do setor (fonte: ABRAPPE)
+- Atacadão possui controle de lote e validade no ERP, mas falhas na execução geram riscos sanitários, multas e danos à reputação
+- Maior parte das perdas só é detectada no inventário físico, que ocorre mensalmente
 
 ### Sistema com IA (MVP)
-- Modelo preditivo adicional que cruza dados internos de venda com variáveis externas:
-  - Clima (temperatura, estação chuvosa) — impacto direto em perecíveis e bebidas
-  - Feriados regionais e estaduais
-  - Datas sazonais do comércio (Black Friday, Dia das Mães, Natal)
-  - Histórico de promoções e elasticidade de preço
-- Gera previsão por filial com 3 cenários: otimista, esperado, pessimista
-- Sugestão de ajuste dinâmico do estoque mínimo com base na previsão
+
+#### 1.1 Monitoramento Preditivo de Validade
+- IA cruza data de vencimento de cada lote com a velocidade média de venda do produto na filial
+- Calcula diariamente a **probabilidade de vencimento antes da venda** para cada lote
+- Classifica em 3 níveis:
+  - **Verde** (sem risco) — venda projetada muito antes do vencimento
+  - **Amarelo** (atenção) — produto pode vencer se a venda não acelerar
+  - **Vermelho** (crítico) — venda projetada após o vencimento, ação necessária
+
+#### 1.2 Sugestão Automática de Ações
+- **Desconto dinâmico:** sugere valor de desconto automaticamente para produtos em amarelo/vermelho (ex: 20% off para acelerar saída)
+- **Realocação entre filiais:** identifica filiais com alta demanda e sugere transferência: *"Loja A vende 50 unidades/dia, Loja B vende 5 — transferir 30 unidades para Loja A"*
+- **Doação ou descarte programado:** para produtos críticos sem chance de venda, gera alerta para retirar da gôndola e registrar baixa
+
+#### 1.3 Dashboard de Risco de Perda
+- Heatmap por filial, categoria e fornecedor
+- Ranking de produtos com maior risco de perda no mês
+- Alerta push para o gerente quando um lote entra em estado crítico
 
 ---
 
-## 2. Controle de Validade e Prevenção de Perdas
+## 2. Detecção de Anomalias em Perdas e Fraudes
 
 ### Sistema Atual (Real)
-- MPDFT firmou TAC nº 851/2023 com o Atacadão Dia a Dia após fiscalização encontrar **113 produtos vencidos** em uma única loja (fonte: MPDFT)
-- Em março de 2026, MP-BA investiga denúncias de venda de carnes impróprias em Salvador (fonte: BNews)
-- Perdas no varejo brasileiro totalizaram **R$ 42,1 bilhões em 2025**, alta de 15,3% (fonte: ABRAPPE)
-- Atacadão possui controle de lote e validade no ERP, mas falhas na execução geram riscos sanitários e multas
+- Perdas no varejo brasileiro: R$ 42,1 bilhões em 2025 (ABRAPPE)
+- Atacarejo é o formato mais eficiente do setor, mas ainda sofre com perdas operacionais e furtos
+- Investigações recentes mostram fragilidades:
+  - MPDFT identificou falha sistêmica no controle de validade (TAC vigente desde 2023)
+  - MP-BA investiga práticas fraudulentas intencionais em loja de Salvador (2026)
+- Atualmente, perdas são registradas manualmente pelo estoquista sem cruzamento inteligente de dados
+- Fraude só é descoberta quando o cliente denuncia ou na auditoria periódica
 
 ### Sistema com IA (MVP)
-- Algoritmo de **priorização de vencimento** que sugere descontos dinâmicos automáticos para produtos próximos ao vencimento
-- Notificação preditiva: com base no histórico de venda, projeta se o produto vai vencer antes de ser vendido
-- Sugestão de realocação entre filiais: *"Loja A vende 50 unidades/dia, Loja B vende 5 — transferir 30 unidades para Loja A antes do vencimento"*
-- Dashboard para o gerente com heatmap de risco de perda por categoria/filial
 
----
+#### 2.1 Monitoramento Contínuo de Padrões
+- ML analisa todos os registros de perda (vencimento, avaria, extravio) cruzando com:
+  - Filial, turno, operador responsável, categoria do produto, dia da semana
+  - Histórico de vendas da filial
+  - Estoque recebido vs. vendido vs. perdido
 
-## 3. Detecção de Anomalias em Perdas e Fraudes
+#### 2.2 Detecção de Anomalias
+- **Desvio entre filiais:** *"Loja X registra 3x mais perda por avaria em eletrônicos que a média da rede"*
+- **Desvio por turno/operador:** *"Perdas no turno da noite são 80% maiores que no turno da manhã"*
+- **Padrão suspeito:** *"Produto Y teve 10 registros de extravio no mesmo mês — provável furto"*
+- **Quebra de padrão:** aumento súbito de perda em categoria que historicamente tinha baixa perda
 
-### Sistema Atual (Real)
-- Perdas no varejo brasileiro: 1,65% do faturamento total (R$ 42,1 bilhões em 2025)
-- Atacarejo é o formato mais eficiente, mas ainda sofre com:
-  - Furto interno e externo
-  - Erro operacional (quebra, avaria no manuseio)
-  - Fraude fiscal e logística (desvio de carga)
-- Controles atuais são reativos: perda só é detectada no inventário físico
+#### 2.3 Classificação por Causa Provável
+- IA classifica automaticamente cada perda em:
+  - **Vencimento** — falha no giro de estoque (PVPS)
+  - **Manuseio** — avaria durante transporte ou estocagem
+  - **Furto** — padrão compatível com subtração (extravio sem registro de venda)
+  - **Erro de sistema** — divergência entre estoque físico e contábil
+- Relatório mensal por causa, permitindo ação direcionada da gestão
 
-### Sistema com IA (MVP)
-- ML monitora padrões de perda por:
-  - Loja, turno, operador, categoria, dia da semana
-  - Análise de desvio: *"Loja X tem 3x mais perda por avaria que a média — investigar"*
-  - Correlação entre queda de venda e aumento de perda (possível fraude)
-- Alerta em tempo real para o gerente quando anomalia é detectada
-- Relatório mensal classificado por causa provável: vencimento, manuseio, furto, erro de sistema
-
----
-
-## 4. Recomendação no PDV
-
-### Sistema Atual (Real)
-- PDV Atacadão possui autoatendimento e self-checkout
-- Atacadão já usa IA para personalizar ofertas com base em hábitos de consumo (declarado em 2025)
-- Não há informação pública sobre recomendação cross-sell no momento da venda no PDV físico
-- App Meu Atacadão já envia ofertas personalizadas
-
-### Sistema com IA (MVP)
-- Algoritmo de **market basket analysis** treinado com histórico de vendas por filial
-- Sugestão de item complementar na tela do PDV no momento da compra:
-  - Ex: leva carne → sugere carvão + refrigerante
-  - Ex: leva feijão → sugere arroz
-  - Ex: leva fralda → sugere lenço umedecido
-- Operador pergunta: *"O(a) senhor(a) também vai levar [produto]?"*
-- Meta: aumentar ticket médio em 10% nas lojas participantes
+#### 2.4 Alertas em Tempo Real
+- Gerente recebe notificação automática quando anomalia é detectada
+- Sugestão de ação: *"Investigar Loja X, corredor 3, turno noturno — perda 3x acima da média"*
+- Histórico para auditoria e prestação de contas ao MP (quando aplicável)
 
 ---
 
 ## Fluxo do MVP
 
-### Cenário Atual (Real)
-```
-ERP TOTVS → Sugestão de compra por giro → Comprador aprova →
-  → Pedido ao fornecedor → Entrada no estoque → PDV registra venda →
-    → Baixa no estoque → Ruptura/Perda detectada só no inventário
 ```
 
-### Cenário com IA
-```
-ERP + ML Previsão → Sugestão de compra inteligente →
-  → Pedido ao fornecedor → Entrada no estoque → PDV registra venda →
-    → Baixa no estoque → ML monitora validade e sugere desconto/realocação
-                      → ML detecta anomalias em perdas em tempo real
-                      → PDV sugere item complementar → + ticket médio
+Entrada de mercadoria → Registro de lote e validade no ERP →
+  → ML monitora validade vs. velocidade de venda →
+    → Risco baixo? → Mantém
+    → Risco médio? → Sugere desconto ou realocação
+    → Risco alto? → Alerta para retirar da gôndola
+      → Perda registrada? → ML analisa padrão e causa →
+        → Anomalia? → Alerta gerente + relatório para auditoria
+
 ```
 
 ---
@@ -120,9 +108,9 @@ ERP + ML Previsão → Sugestão de compra inteligente →
 | Frontend | React + TypeScript |
 | Backend | Node.js (API) + Python (ML) |
 | Banco de Dados | PostgreSQL |
-| ML | scikit-learn, pandas, numpy |
+| ML | scikit-learn, pandas, numpy (Isolation Forest para anomalias) |
 | Vizualização | Chart.js / Recharts (dashboard) |
-| Mobile | React Native (para inventário futuro) |
+| Notificação | WebSocket / Push |
 
 ---
 
@@ -130,11 +118,11 @@ ERP + ML Previsão → Sugestão de compra inteligente →
 
 | Indicador | Meta | Referência Setorial |
 |-----------|------|---------------------|
-| Redução de ruptura nas categorias monitoradas | 20% | Média do varejo: 12,4% (Neogrid 2026) |
-| Redução de perdas | 15% | Perdas no varejo: R$ 42,1 bi / 1,65% faturamento (ABRAPPE 2025) |
-| Aumento do ticket médio (recomendação) | 10% | — |
-| Precisão da previsão de demanda | > 80% | — |
-| Produtos vencidos em loja | Zero | TAC MPDFT vigente |
+| Redução de produtos vencidos em loja | Zero | TAC MPDFT vigente |
+| Redução de perdas totais | 15% | Perdas no varejo: R$ 42,1 bi / 1,65% faturamento (ABRAPPE 2025) |
+| Tempo entre perda e detecção | Redução de 70% | Hoje: detectado apenas no inventário mensal |
+| Precisão da classificação de causa | > 85% | — |
+| Alertas de anomalia com taxa de falsos positivos | < 10% | — |
 
 ---
 
@@ -146,5 +134,4 @@ ERP + ML Previsão → Sugestão de compra inteligente →
 - [ABRAPPE — 9ª Pesquisa de Prevenção de Perdas no Varejo Brasileiro (2025)](https://samais.com.br/publicacoes/perdas-de-r-421-bilhoes-se-o-desperdicio-fosse-uma-empresa-seria-a-4a-maior-do-varejo-alimentar-brasileiro)
 - [Neogrid — Índice de Ruptura (mai/2026)](https://www.cnnbrasil.com.br/agro/ovos-e-cafe-impulsionam-indice-de-ruptura-em-supermercados-em-maio/)
 - [Diário do Comércio — Atacadão acelera transformação digital (2025)](https://dcomercio.com.br/publicacao/s/atacadao-acelera-transformacao-digital-de-olho-na-experiencia-do-cliente)
-- [SA+ — Carrefour inicia unificação do sistema comercial (2026)](https://samais.com.br/publicacoes/carrefour-inicia-unificacao-de-sistemas-e-transfere-sede-para-estruturas-do-atacadao)
 - [Blog Atacadão — Cuidar do Estoque é Fundamental (2021)](https://blog.atacadao.com.br/gestao/cuidar-do-estoque-e-fundamental/)
