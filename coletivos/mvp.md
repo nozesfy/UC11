@@ -36,7 +36,7 @@ MVP de um sistema de inteligência artificial para controle de validade, preven�
 #### 1.2 Sugestão Automática de Ações
 - **Desconto dinâmico:** sugere valor de desconto automaticamente para produtos em amarelo/vermelho (ex: 20% off para acelerar saída)
 - **Realocação entre filiais:** identifica filiais com alta demanda e sugere transferência: *"Loja A vende 50 unidades/dia, Loja B vende 5 — transferir 30 unidades para Loja A"*
-- **Doação programada:** para produtos críticos sem chance de venda, gera alerta para retirar da gôndola e encaminhar para doação
+- **Descarte programado:** para produtos críticos sem chance de venda, gera alerta para retirar da gôndola e registrar baixa para descarte
 
 #### 1.3 Dashboard de Risco de Perda
 - Heatmap por filial, categoria e fornecedor
