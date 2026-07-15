@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.4.0] — 2026-07-15
+
+### Adicionado
+
+- Pasta `coletivos/mvp/` com 7 novos artefatos expandindo a documentação do MVP:
+  - `user-stories.md` — 12 user stories e critérios de aceitação
+  - `requisitos-nao-funcionais.md` — performance, segurança, usabilidade e compatibilidade
+  - `mvp-canvas.md` — MVP Canvas (problema, solução, métricas, riscos)
+  - `roadmap-sprints.md` — 4 sprints com cronograma (gantt chart) e release plan
+  - `riscos-mitigacao.md` — 8 riscos com matriz e planos de contingência
+  - `wireframes.md` — descrição textual de 4 telas do dashboard
+  - `lgpd-conformidade.md` — mapeamento LGPD, medidas de proteção e checklist
+
 ## [1.3.0] — 2026-07-14
 
 ### Adicionado
