@@ -12,28 +12,28 @@ gantt
     axisFormat  %b/%Y
 
     section Sprint 1 — Fundação
-    Configuração do projeto (React + Node + PostgreSQL)    :s1, 2026-08-01, 14d
-    Integração com ERP TOTVS (leitura de lotes e validades) :s1, 14d
-    Autenticação e controle de acesso                        :s1, 7d
-    Dashboard básico com heatmap                             :s1, 14d
+    Configuração do projeto (React + Node + PostgreSQL)    :a1, 2026-08-01, 14d
+    Integração com ERP TOTVS                               :a2, after a1, 14d
+    Autenticação e controle de acesso                      :a3, after a2, 7d
+    Dashboard básico com heatmap                            :a4, after a3, 14d
 
     section Sprint 2 — Núcleo de Validade
-    ML: cálculo de risco por lote (velocidade vs validade)   :s2, after s1, 14d
-    Classificação verde/amarelo/vermelho                     :s2, 7d
-    Sugestão de desconto dinâmico                            :s2, 7d
-    Sugestão de realocação entre filiais                     :s2, 7d
+    ML: cálculo de risco por lote                           :b1, after a4, 14d
+    Classificação verde/amarelo/vermelho                    :b2, after b1, 7d
+    Sugestão de desconto dinâmico                           :b3, after b2, 7d
+    Sugestão de realocação entre filiais                    :b4, after b3, 7d
 
     section Sprint 3 — Anomalias
-    ML: Isolation Forest para detecção de anomalias          :s3, after s2, 14d
-    Classificação automática de causa da perda                :s3, 10d
-    Alertas em tempo real (WebSocket/Push)                    :s3, 7d
-    Relatório mensal por causa                                :s3, 7d
+    ML: Isolation Forest para detecção de anomalias        :c1, after b4, 14d
+    Classificação automática de causa da perda              :c2, after c1, 10d
+    Alertas em tempo real (WebSocket/Push)                  :c3, after c2, 7d
+    Relatório mensal por causa                              :c4, after c3, 7d
 
     section Sprint 4 — Refino e Testes
-    Testes de integração e aceitação                         :s4, after s3, 10d
-    Ajustes no modelo ML (precisão < 85%)                   :s4, 10d
-    Documentação da API (Swagger)                            :s4, 5d
-    Validação com usuários reais (piloto 1 loja)             :s4, 10d
+    Testes de integração e aceitação                       :d1, after c4, 10d
+    Ajustes no modelo ML (precisão < 85%)                  :d2, after d1, 10d
+    Documentação da API (Swagger)                           :d3, after d2, 5d
+    Validação com usuários reais (piloto 1 loja)            :d4, after d3, 10d
 ```
 
 ## Detalhamento das Sprints
