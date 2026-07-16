@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.5.0] — 2026-07-16
+
+### Adicionado
+
+- 6 novos artefatos em `coletivos/mvp/` para a 6ª microentrega:
+  - `casos-de-uso.md` — diagrama de casos de uso (Mermaid) com 12 UC, descrições e matriz ator vs UC
+  - `fluxo-navegacao.md` — sitemap, fluxo por ator, mapa de telas e caminhos de navegação
+  - `arquitetura.md` — diagrama de arquitetura em camadas (frontend, API, ML, BD, integração TOTVS), stack tecnológica e decisões arquiteturais
+  - `banco-dados.md` — dicionário completo de 10 tabelas (PostgreSQL), índices e views SQL
+  - `modelo-er.md` — diagrama ER completo e conceitual (Mermaid) com regras de negócio
+  - `estrutura-projeto.md` — estrutura de diretórios do repositório, estratégia de branches (Git Flow), convenção de commits e responsabilidades
+
 ## [1.4.0] — 2026-07-15
 
 ### Adicionado
