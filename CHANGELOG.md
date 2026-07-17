@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.6.0] — 2026-07-17
+
+### Adicionado
+
+- `coletivos/requisitos-por-caso-de-uso.md` — matriz de rastreabilidade entre casos de uso (UC01-UC12) e requisitos funcionais/não funcionais, com detalhamento por UC, matriz inversa e identificação de funcionalidades ML sem requisito direto
+
 ## [1.5.0] — 2026-07-16
 
 ### Adicionado
