@@ -1,0 +1,110 @@
+/* Importa o Tailwind CSS para usar classes utilitárias */
+@import "tailwindcss";
+
+/* Define o tema personalizado com cores, fontes, textos e espaçamentos */
+@theme {
+  /* Paleta de cores do projeto — baseada no design system do wireframe */
+  --color-primary: #2a9462;           /* Verde principal do Atacadão */
+  --color-on-primary: #ffffff;        /* Texto branco sobre primary */
+  --color-warning: #f97f08;           /* Laranja para alertas/atenção */
+  --color-error: #ba1a1a;             /* Vermelho para erros/crítico */
+  --color-background: #fcf9f8;        /* Fundo claro da aplicação */
+  --color-surface: #ffffff;           /* Cor de superfície (cards) */
+  --color-on-surface: #1c1b1b;        /* Texto sobre superfície */
+  --color-on-surface-variant: #3e4941; /* Texto variante (menos destaque) */
+  --color-outline-variant: #bdcabf;   /* Borda suave */
+  --color-secondary-surface: #ecf4e8; /* Fundo secundário esverdeado */
+  --color-tertiary: #f97f08;          /* Laranja terciário */
+  --color-surface-container-low: #f6f3f2; /* Fundo de container baixo */
+  --color-surface-container: #f0eded;      /* Fundo de container */
+  --color-error-container: #ffdad6;        /* Fundo de container de erro */
+  --color-outline: #6e7a71;                /* Borda padrão */
+  --color-secondary: #596057;              /* Cor secundária */
+
+  /* Fonte principal do projeto */
+  --font-sans: 'Inter', sans-serif;
+
+  /* Estilos de texto — headline grande (títulos) */
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 40px;
+  --text-headline-lg--letter-spacing: -0.02em;
+  --text-headline-lg--font-weight: 700;
+
+  /* Estilos de texto — headline médio */
+  --text-headline-md: 20px;
+  --text-headline-md--line-height: 28px;
+  --text-headline-md--font-weight: 600;
+
+  /* Estilos de texto — label em negrito */
+  --text-label-bold: 12px;
+  --text-label-bold--line-height: 16px;
+  --text-label-bold--letter-spacing: 0.05em;
+  --text-label-bold--font-weight: 600;
+
+  /* Estilos de texto — corpo padrão */
+  --text-body-md: 14px;
+  --text-body-md--line-height: 20px;
+  --text-body-md--font-weight: 400;
+
+  /* Estilos de texto — mono para dados */
+  --text-data-mono: 14px;
+  --text-data-mono--line-height: 20px;
+  --text-data-mono--font-weight: 500;
+
+  /* Estilos de texto — corpo grande */
+  --text-body-lg: 16px;
+  --text-body-lg--line-height: 24px;
+  --text-body-lg--font-weight: 400;
+
+  /* Espaçamentos personalizados (margin, padding, gap) */
+  --spacing-unit: 4px;              /* Unidade base */
+  --spacing-stack-sm: 8px;          /* Espaçamento pequeno */
+  --spacing-stack-md: 16px;         /* Espaçamento médio */
+  --spacing-stack-lg: 32px;         /* Espaçamento grande */
+  --spacing-gutter: 16px;           /* Espaçamento entre colunas */
+  --spacing-margin: 24px;           /* Margem padrão */
+  --spacing-container-padding: 16px; /* Padding interno de containers */
+}
+
+/* Reset de box-sizing para todos os elementos */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Estilos globais do body */
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Altura mínima para a div raiz ocupar a tela toda */
+#root {
+  min-height: 100vh;
+}
+
+/* Configuração dos ícones Material Symbols (estado padrão — sem preenchimento) */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* Versão preenchida dos ícones */
+.material-symbols-outlined.fill {
+  font-variation-settings: 'FILL' 1;
+}
+
+/* Scrollbar personalizada (mais fina e com cor do tema) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-outline-variant);
+  border-radius: 10px;
+}

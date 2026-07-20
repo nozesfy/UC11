@@ -23,6 +23,30 @@ MVP de um sistema com IA para **controle de validade, prevenção de perdas e de
 - `ATIVIDADE.md` — descrição detalhada do problema
 - `CHANGELOG.md` — histórico de alterações do projeto
 
+### `frontend/` — Aplicação React (Vite + TypeScript + Tailwind CSS)
+
+Protótipo funcional do MVP com as seguintes páginas:
+
+| Rota | Página | Descrição |
+|------|--------|-----------|
+| `/login` | Login | Autenticação com CPF (máscara + validação) e senha |
+| `/cadastro` | Cadastro | Registro de novo usuário com validação completa |
+| `/esqueceu-senha` | Recuperar Senha | Recuperação de senha via CPF e e-mail |
+| `/` | Dashboard | KPIs, heatmap de risco, alertas de estoque, predições IA |
+| `/lote/:id` | Detalhe do Lote | Informações do lote, ações sugeridas, recomendações de ML |
+| `/anomalias` | Anomalias | Gestão de anomalias com detecção inteligente por IA |
+| `/relatorios` | Relatório Mensal | KPIs fiscais, faturamento por filial, análise preditiva |
+
+**Funcionalidades simuladas com IA:** análise preditiva de perdas, detecção de anomalias, recomendações de precificação dinâmica, realocação inteligente e otimização fiscal — com barra de progresso, nível de confiança do modelo e badges de prioridade.
+
+Para executar:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
 ### `coletivos/` — Artefatos Coletivos
 
 - `proposta-equipe.md` — proposta conceitual da solução

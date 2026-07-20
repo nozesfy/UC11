@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.8.0] — 2026-07-20
+
+### Adicionado
+
+- `frontend/` — página de Cadastro (`/cadastro`) com validação de CPF, e-mail e confirmação de senha
+- `frontend/` — página de Recuperação de Senha (`/esqueceu-senha`) com formulário CPF + e-mail
+- `frontend/` — componente `AiInsights` com simulação de análise por ML (barra de progresso, confiança do modelo, badges de prioridade)
+- `frontend/` — painel de predições de IA no Dashboard, Anomalias, Detalhe do Lote e Relatório Mensal
+- `frontend/` — utilitário `utils/validators.ts` com funções `formatCpf` e `isValidCpf`
+
+### Corrigido
+
+- `frontend/` — `--color-on-primary` faltando no tema Tailwind, fazendo `text-on-primary` não aplicar cor branca nos botões verdes
+- `frontend/` — botão "Exportar PDF" no RelatórioMensal usava `text-surface` em vez de `text-on-primary`
+
+### Alterado
+
+- `frontend/` — Login agora com máscara de CPF, toggle de senha e validação com feedback visual
+- `frontend/` — todos os botões de Login, Cadastro e Recuperação de Senha alterados para bordas quadradas (sem `rounded-full`)
+- `frontend/` — link "Cadastre-se" adicionado na tela de Login
+
 ## [1.7.0] — 2026-07-17
 
 ### Adicionado
