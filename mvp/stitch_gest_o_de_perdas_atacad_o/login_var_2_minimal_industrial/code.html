@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="pt-br" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Login - RetailOps Supermarket HQ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#76daa2",
+                    "surface-container-highest": "#e5e2e1",
+                    "inverse-surface": "#313030",
+                    "on-secondary-fixed-variant": "#414940",
+                    "secondary-container": "#dde5d9",
+                    "on-tertiary-container": "#fffbff",
+                    "secondary-fixed-dim": "#c1c9be",
+                    "on-secondary-container": "#5f665d",
+                    "on-primary-fixed-variant": "#005231",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#161d16",
+                    "background": "#ecf4e8", /* Specific requirement: light green #ecf4e8 */
+                    "surface-container": "#f0eded",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#596057",
+                    "outline-variant": "#bdcabf",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dcd9d9",
+                    "on-primary-container": "#f6fff5",
+                    "primary-container": "#128555",
+                    "surface-container-high": "#eae7e7",
+                    "on-surface": "#1c1b1b",
+                    "tertiary-fixed": "#ffdcc6",
+                    "on-background": "#1c1b1b",
+                    "on-surface-variant": "#3e4941",
+                    "tertiary": "#924700",
+                    "primary-fixed": "#92f7bc",
+                    "on-tertiary-fixed-variant": "#723600",
+                    "surface-bright": "#fcf9f8",
+                    "on-tertiary-fixed": "#311300",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e5e2e1",
+                    "on-error": "#ffffff",
+                    "outline": "#6e7a71",
+                    "tertiary-fixed-dim": "#ffb786",
+                    "secondary-fixed": "#dde5d9",
+                    "surface": "#fcf9f8",
+                    "primary-fixed-dim": "#76daa2",
+                    "on-primary-fixed": "#002111",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface-container-low": "#f6f3f2",
+                    "tertiary-container": "#b75b00",
+                    "surface-tint": "#006d43",
+                    "error-container": "#ffdad6",
+                    "primary": "#006a41",
+                    "brand-alert": "#f97f08" /* Requirement: Action color */
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px", /* Strict requirement: sharp corners */
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "stack-md": "16px",
+                    "container-padding": "16px",
+                    "stack-lg": "32px",
+                    "margin": "24px",
+                    "stack-sm": "8px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Inter"],
+                    "data-mono": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "data-mono": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #ecf4e8;
+            font-family: 'Inter', sans-serif;
+        }
+        .login-card {
+            box-shadow: 0 4px 0px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+        }
+        input:focus {
+            outline: none;
+            border-color: #006a41 !important;
+            border-width: 2px !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-container-padding">
+<!-- Login Container -->
+<main class="w-full max-w-[420px] animate-in fade-in duration-700">
+<!-- Brand Header (External to Card) -->
+<div class="text-center mb-stack-lg">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">RetailOps HQ</h1>
+<p class="font-label-bold text-label-bold text-outline uppercase mt-unit">Sistema de Gestão Supermercadista</p>
+</div>
+<!-- Floating Login Card -->
+<div class="bg-surface-container-lowest p-stack-lg border border-outline-variant login-card">
+<!-- 1. Icon/Logo Section -->
+<div class="flex justify-center mb-stack-md">
+<div class="w-12 h-12 bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="lock_open">lock_open</span>
+</div>
+</div>
+<!-- 2. Title -->
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-on-surface">Portal Operacional</h2>
+<div class="h-1 w-12 bg-primary mx-auto mt-stack-sm"></div>
+</div>
+<!-- Login Form -->
+<form class="space-y-stack-md" onsubmit="return false">
+<!-- 3. Campo de Matrícula -->
+<div class="space-y-unit">
+<label class="font-label-bold text-label-bold text-on-surface-variant" for="unidade">Unidade Operacional</label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-[20px]">store</span>
+<select class="w-full pl-10 py-3 bg-surface border border-outline-variant font-data-mono text-data-mono focus:ring-0 transition-all appearance-none" id="unidade">
+<option value="" disabled="" selected="">Selecione a unidade</option>
+<option value="samambaia">Samambaia/DF</option>
+<option value="taguatinga">Taguatinga/DF</option>
+<option value="ceilandia">Ceilândia/DF</option>
+<option value="gama">Gama/DF</option>
+</select>
+<span class="absolute right-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline pointer-events-none">expand_more</span>
+</div>
+</div><div class="space-y-unit">
+<label class="font-label-bold text-label-bold text-on-surface-variant" for="matricula">CPF</label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-[20px]" data-icon="badge">badge</span>
+<input class="w-full pl-10 py-3 bg-surface border border-outline-variant font-data-mono text-data-mono focus:ring-0 transition-all" id="matricula" placeholder="000.000.000-00" type="text">
+</div>
+</div>
+<!-- 4. Campo de Senha -->
+<div class="space-y-unit">
+<label class="font-label-bold text-label-bold text-on-surface-variant" for="password">Criar senha</label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-[20px]" data-icon="key">key</span>
+<input class="w-full pl-10 py-3 bg-surface border border-outline-variant font-data-mono text-data-mono focus:ring-0 transition-all" id="password" placeholder="••••••••" type="password">
+</div>
+</div>
+<div class="flex items-center justify-between py-unit">
+<label class="flex items-center space-x-2 cursor-pointer">
+<input class="w-4 h-4 border-outline-variant text-primary rounded-none focus:ring-0" type="checkbox">
+<span class="font-body-md text-body-md text-on-surface-variant">Lembrar acesso</span>
+</label>
+<a class="font-body-md text-body-md text-primary hover:underline" href="#">Esqueci a senha</a>
+</div>
+<!-- 5. Botão de Ação Principal (Arredondado) -->
+<button class="w-full py-4 bg-brand-alert hover:opacity-90 active:scale-[0.98] transition-all rounded-full font-label-bold text-label-bold text-on-primary tracking-widest flex items-center justify-center space-x-2 shadow-sm" type="submit">
+<span class="">ACESSAR PAINEL</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+<!-- 6. Texto secundário indicando perfis -->
+<div class="mt-stack-lg pt-stack-md border-t border-outline-variant">
+<p class="font-label-bold text-label-bold text-outline text-center mb-stack-sm">PERFIS DE ACESSO DISPONÍVEIS:</p>
+<div class="flex flex-wrap justify-center gap-2">
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant font-label-bold text-[10px]">OPERADOR</span>
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant font-label-bold text-[10px]">ESTOQUISTA</span>
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant font-label-bold text-[10px]">GERENTE</span>
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant font-label-bold text-[10px]">COMPRADOR</span>
+</div>
+</div>
+</div>
+<!-- Footer Info -->
+<div class="mt-stack-lg text-center">
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60">
+                © 2024 RetailOps Supermarket HQ<br>
+                Ambiente Seguro - RNF008 Compliance Verified
+            </p>
+</div>
+</main>
+<!-- Background Pattern Effect -->
+<div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden opacity-20">
+<div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(#006a41 1px, transparent 1px); background-size: 32px 32px;"></div>
+</div>
+<script>
+        // Micro-interaction for the login button
+        const loginBtn = document.querySelector('button[type="submit"]');
+        loginBtn.addEventListener('click', function() {
+            this.innerHTML = '<span class="material-symbols-outlined animate-spin" data-icon="progress_activity">progress_activity</span><span>AUTENTICANDO...</span>';
+            setTimeout(() => {
+                this.innerHTML = '<span>ACESSAR PAINEL</span><span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>';
+            }, 2000);
+        });
+    </script>
+
+
+
+
+</body></html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #bdcabf;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2a9462;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#2a9462",
+                        "secondary": "#f97f08",
+                        "background": "#ecf4e8",
+                        "surface": "#ffffff",
+                        "on-surface": "#1c1b1b",
+                        "on-surface-variant": "#3e4941",
+                        "outline-variant": "#bdcabf",
+                        "secondary-container": "#dde5d9",
+                        "on-secondary-container": "#5f665d",
+                        "error": "#ba1a1a",
+                        "tertiary": "#f97f08",
+                        "tertiary-container": "#ffdcc6",
+                        "on-tertiary-container": "#311300",
+                        "surface-container-low": "#f6f3f2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "stack-md": "16px",
+                        "unit": "4px",
+                        "container-padding": "16px",
+                        "stack-sm": "8px",
+                        "margin": "24px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "data-mono": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "data-mono": ["14px", {"lineHeight": "20px", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- Side Navigation Bar -->
+<aside class="fixed left-0 top-0 h-full w-64 border-r border-outline-variant bg-surface flex flex-col z-20">
+<div class="p-margin flex flex-col gap-unit">
+<h1 class="font-headline-md text-headline-md text-primary font-bold">RetailOps</h1>
+<span class="font-label-bold text-label-bold text-on-surface-variant">Supermarket HQ</span>
+</div>
+<nav class="flex-1 mt-stack-md">
+<a class="flex items-center gap-stack-sm px-margin py-stack-sm text-on-surface-variant hover:bg-background transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-stack-sm px-margin py-stack-sm text-on-surface-variant hover:bg-background transition-colors" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-body-md">Lotes</span>
+</a>
+<a class="flex items-center gap-stack-sm px-margin py-stack-sm text-on-surface-variant hover:bg-background transition-colors" href="#">
+<span class="material-symbols-outlined">warning</span>
+<span class="font-body-md">Anomalias</span>
+</a>
+<a class="flex items-center gap-stack-sm px-margin py-stack-sm border-l-4 border-primary bg-background text-primary font-label-bold" href="#">
+<span class="material-symbols-outlined fill-icon" style="font-variation-settings: 'FILL' 1;">assessment</span>
+<span class="font-label-bold">Relatórios</span>
+</a>
+</nav>
+<div class="p-margin border-t border-outline-variant mt-auto">
+<div class="flex items-center gap-stack-sm">
+<div class="w-10 h-10 bg-outline-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Manager profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX1aYg5uNkycGYEtms_h6xUfO5auK1iKLkpxaM3toyXQEZZ8hEbw5oq32mss1DU4d0Srms1_pPDQ8zKgiEvCwnu1ES4_yetibB2S-5aRzFvRD7j8A5OHokDSaBS_X5T0E5l8riuh3y9cy85ciS9f41JRZHHCpujBw18jLyn2uggNcBbicfmHc-u1AdOZWnqLFZvRCgg1PiKMKiL9wARLqE6yWI6Uk7ESOkJ65OclcAwxk2DCrHWlU">
+</div>
+<div class="flex flex-col">
+<span class="font-label-bold text-on-surface">Regional Lead</span>
+<span class="text-[10px] text-on-surface-variant">Ver Perfil</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 right-0 left-64 h-16 bg-surface border-b border-outline-variant flex justify-between items-center px-margin z-10">
+<div class="flex items-center gap-stack-md">
+<span class="font-headline-md text-headline-md font-bold text-primary">Relatórios Operacionais</span>
+<div class="h-4 w-[1px] bg-outline-variant"></div>
+<div class="flex items-center gap-unit text-primary font-bold border-b-2 border-primary py-stack-sm">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span class="font-label-bold">Samambaia/DF</span>
+</div>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="material-symbols-outlined p-stack-sm text-on-surface-variant hover:bg-background rounded-full transition-colors">notifications</button>
+<button class="material-symbols-outlined p-stack-sm text-on-surface-variant hover:bg-background rounded-full transition-colors">account_circle</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 mt-16 p-margin min-h-screen">
+<!-- Header Actions -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-stack-lg gap-stack-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Relatório Mensal - Julho/2026</h2>
+<p class="text-on-surface-variant font-body-md mt-unit">KPIs de Faturamento, Perdas e Emissões Fiscais.</p>
+</div>
+<div class="flex gap-stack-sm">
+<button class="flex items-center gap-stack-sm px-margin py-2 bg-primary text-surface rounded-full font-label-bold transition-transform active:scale-95 hover:opacity-90">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+                Exportar PDF
+            </button>
+<button class="flex items-center gap-stack-sm px-margin py-2 border border-primary text-primary bg-transparent rounded-full font-label-bold transition-transform active:scale-95 hover:bg-background">
+<span class="material-symbols-outlined text-[18px]">csv</span>
+                Exportar CSV
+            </button>
+</div>
+</div>
+<!-- KPI Grid Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-gutter">
+<!-- RF031: Taxa de Ruptura (Primary KPI) -->
+<div class="bg-surface border border-outline-variant p-container-padding flex flex-col justify-between h-32 relative">
+<div class="flex justify-between items-start">
+<span class="font-label-bold text-on-surface-variant uppercase tracking-wider">Taxa de Ruptura</span>
+<span class="material-symbols-outlined text-primary">inventory</span>
+</div>
+<div class="flex items-baseline gap-stack-sm">
+<span class="font-headline-lg text-headline-lg">4.2%</span>
+<span class="text-primary font-label-bold text-[10px]">-0.8% vs Jun</span>
+</div>
+<div class="absolute bottom-0 left-0 h-1 bg-primary w-full"></div>
+</div>
+<!-- RF032: Ticket Médio (CPF vs CNPJ) -->
+<div class="bg-surface border border-outline-variant p-container-padding flex flex-col justify-between h-32 relative">
+<div class="flex justify-between items-start">
+<span class="font-label-bold text-on-surface-variant uppercase tracking-wider">Ticket Médio</span>
+<span class="material-symbols-outlined text-secondary">payments</span>
+</div>
+<div class="flex flex-col">
+<div class="flex justify-between items-center text-[11px]">
+<span class="font-label-bold">CPF:</span>
+<span class="font-data-mono font-bold text-primary">R$ 142,50</span>
+</div>
+<div class="flex justify-between items-center text-[11px]">
+<span class="font-label-bold">CNPJ:</span>
+<span class="font-data-mono font-bold text-secondary">R$ 2.450,00</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 h-1 bg-secondary w-full"></div>
+</div>
+<!-- Perda Total -->
+<div class="bg-surface border border-outline-variant p-container-padding flex flex-col justify-between h-32 relative">
+<div class="flex justify-between items-start">
+<span class="font-label-bold text-on-surface-variant uppercase tracking-wider">Perda Total</span>
+<span class="material-symbols-outlined text-error">trending_down</span>
+</div>
+<div class="flex items-baseline gap-stack-sm">
+<span class="font-headline-lg text-headline-lg">R$ 524k</span>
+<span class="text-error font-label-bold text-[10px]">+12% Meta</span>
+</div>
+<div class="absolute bottom-0 left-0 h-1 bg-error w-full"></div>
+</div>
+<!-- RF004: Resumo NF-e vs Cupons -->
+<div class="bg-surface border border-outline-variant p-container-padding flex flex-col justify-between h-32 relative">
+<div class="flex justify-between items-start">
+<span class="font-label-bold text-on-surface-variant uppercase tracking-wider">Emissões Fiscais</span>
+<span class="material-symbols-outlined text-on-surface-variant">receipt_long</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-[10px]">
+<span>NF-e (CNPJ)</span>
+<span class="font-data-mono">1.240 un</span>
+</div>
+<div class="flex justify-between items-center text-[10px]">
+<span>CFC-e (CPF)</span>
+<span class="font-data-mono">45.890 un</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 h-1 bg-outline-variant w-full"></div>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Perda por Filial Chart -->
+<div class="col-span-12 lg:col-span-8 bg-surface border border-outline-variant p-container-padding flex flex-col">
+<div class="flex justify-between items-center mb-stack-lg">
+<h3 class="font-headline-md text-headline-md">Faturamento por Filial</h3>
+<div class="flex items-center gap-stack-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<span class="font-label-bold uppercase">Julho 2026</span>
+</div>
+</div>
+<div class="flex-1 flex items-end justify-between gap-gutter pt-stack-lg h-[280px]">
+<!-- Bars representing different locations -->
+<div class="flex-1 flex flex-col items-center gap-stack-sm group">
+<div class="w-full bg-background border border-outline-variant relative hover:bg-primary/20 transition-colors cursor-pointer" style="height: 85%">
+<div class="absolute -top-6 w-full text-center font-data-mono text-[10px]">M$ 1.4</div>
+</div>
+<span class="font-label-bold text-[10px] uppercase text-on-surface-variant truncate w-full text-center">Samambaia</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-stack-sm group">
+<div class="w-full bg-background border border-outline-variant relative hover:bg-primary/20 transition-colors cursor-pointer" style="height: 70%">
+<div class="absolute -top-6 w-full text-center font-data-mono text-[10px]">M$ 1.1</div>
+</div>
+<span class="font-label-bold text-[10px] uppercase text-on-surface-variant truncate w-full text-center">Taguatinga</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-stack-sm group">
+<div class="w-full bg-background border border-outline-variant relative hover:bg-primary/20 transition-colors cursor-pointer" style="height: 95%">
+<div class="absolute -top-6 w-full text-center font-data-mono text-[10px]">M$ 1.6</div>
+</div>
+<span class="font-label-bold text-[10px] uppercase text-on-surface-variant truncate w-full text-center">Ceilândia</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-stack-sm group">
+<div class="w-full bg-background border border-outline-variant relative hover:bg-primary/20 transition-colors cursor-pointer" style="height: 45%">
+<div class="absolute -top-6 w-full text-center font-data-mono text-[10px]">M$ 0.5</div>
+</div>
+<span class="font-label-bold text-[10px] uppercase text-on-surface-variant truncate w-full text-center">Asa Sul</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-stack-sm group">
+<div class="w-full bg-background border border-outline-variant relative hover:bg-primary/20 transition-colors cursor-pointer" style="height: 60%">
+<div class="absolute -top-6 w-full text-center font-data-mono text-[10px]">M$ 0.9</div>
+</div>
+<span class="font-label-bold text-[10px] uppercase text-on-surface-variant truncate w-full text-center">Gama</span>
+</div>
+</div>
+</div>
+<!-- RF032/RF004 Details Side Panel -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-gutter">
+<div class="bg-surface border border-outline-variant p-container-padding flex-1 flex flex-col gap-stack-md">
+<h3 class="font-label-bold text-on-surface-variant uppercase border-b border-outline-variant pb-2">Distribuição de Receita</h3>
+<div class="flex-1 flex flex-col justify-center gap-stack-lg">
+<div class="flex flex-col gap-unit">
+<div class="flex justify-between items-end">
+<span class="font-label-bold text-primary">Pessoa Física (CPF)</span>
+<span class="font-data-mono text-[12px] font-bold">62%</span>
+</div>
+<div class="w-full bg-background h-3 border border-outline-variant">
+<div class="bg-primary h-full" style="width: 62%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-unit">
+<div class="flex justify-between items-end">
+<span class="font-label-bold text-secondary">Vendas Atacado (CNPJ)</span>
+<span class="font-data-mono text-[12px] font-bold">38%</span>
+</div>
+<div class="w-full bg-background h-3 border border-outline-variant">
+<div class="bg-secondary h-full" style="width: 38%"></div>
+</div>
+</div>
+</div>
+<div class="p-stack-sm bg-background border border-outline-variant">
+<p class="text-[11px] text-on-surface-variant italic">
+                        * O ticket médio CNPJ cresceu 15% este mês devido a novas parcerias com restaurantes locais.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Audit Table -->
+<div class="col-span-12 bg-surface border border-outline-variant">
+<div class="p-container-padding border-b border-outline-variant bg-background flex justify-between items-center">
+<span class="font-label-bold text-on-surface uppercase">Histórico de Emissões &amp; Divergências</span>
+<span class="font-label-bold text-primary cursor-pointer hover:underline">Ver Relatório Completo</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-background border-b border-outline-variant">
+<th class="px-container-padding py-stack-sm font-label-bold text-on-surface">DATA</th>
+<th class="px-container-padding py-stack-sm font-label-bold text-on-surface">FILIAL</th>
+<th class="px-container-padding py-stack-sm font-label-bold text-on-surface">CATEGORIA</th>
+<th class="px-container-padding py-stack-sm font-label-bold text-on-surface">DOC. FISCAL</th>
+<th class="px-container-padding py-stack-sm font-label-bold text-on-surface text-right">VALOR TOTAL</th>
+</tr>
+</thead>
+<tbody class="font-data-mono text-[13px]">
+<tr class="border-b border-outline-variant hover:bg-background transition-colors">
+<td class="px-container-padding py-stack-md">29 Jul 2026</td>
+<td class="px-container-padding py-stack-md font-bold">Samambaia Norte</td>
+<td class="px-container-padding py-stack-md"><span class="px-2 py-0.5 border border-primary text-primary text-[10px] font-bold">VAREJO (CPF)</span></td>
+<td class="px-container-padding py-stack-md">CFC-e #4492</td>
+<td class="px-container-padding py-stack-md text-right font-bold">R$ 382,10</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-background transition-colors">
+<td class="px-container-padding py-stack-md">29 Jul 2026</td>
+<td class="px-container-padding py-stack-md font-bold">Ceilândia Sul</td>
+<td class="px-container-padding py-stack-md"><span class="px-2 py-0.5 border border-secondary text-secondary text-[10px] font-bold">ATACADO (CNPJ)</span></td>
+<td class="px-container-padding py-stack-md">NF-e #88102</td>
+<td class="px-container-padding py-stack-md text-right font-bold">R$ 4.290,00</td>
+</tr>
+<tr class="hover:bg-background transition-colors">
+<td class="px-container-padding py-stack-md">28 Jul 2026</td>
+<td class="px-container-padding py-stack-md font-bold">Asa Norte</td>
+<td class="px-container-padding py-stack-md"><span class="px-2 py-0.5 border border-primary text-primary text-[10px] font-bold">VAREJO (CPF)</span></td>
+<td class="px-container-padding py-stack-md">CFC-e #4489</td>
+<td class="px-container-padding py-stack-md text-right font-bold">R$ 112,45</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+<script>
+    // Subtle animation for elements on load
+    window.addEventListener('DOMContentLoaded', () => {
+        const blocks = document.querySelectorAll('.bg-surface');
+        blocks.forEach((block, index) => {
+            block.style.opacity = '0';
+            block.style.transform = 'translateY(8px)';
+            block.style.transition = `opacity 0.4s ease-out ${index * 0.04}s, transform 0.4s ease-out ${index * 0.04}s`;
+            setTimeout(() => {
+                block.style.opacity = '1';
+                block.style.transform = 'translateY(0)';
+            }, 50);
+        });
+    });
+</script>
+</body></html>

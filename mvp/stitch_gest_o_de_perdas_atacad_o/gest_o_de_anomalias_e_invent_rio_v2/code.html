@@ -1,0 +1,379 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>RetailOps | Gestão de Anomalias e Inventário</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#f97f08",
+                    "surface-dim": "#dcd9d9",
+                    "surface-tint": "#2a9462",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#ffb786",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#ffdcc6",
+                    "outline-variant": "#bdcabf",
+                    "surface-bright": "#ffffff",
+                    "secondary-fixed": "#ecf4e8",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface": "#ffffff",
+                    "secondary-container": "#ecf4e8",
+                    "inverse-primary": "#76daa2",
+                    "surface-container-high": "#eae7e7",
+                    "secondary-fixed-dim": "#c1c9be",
+                    "primary-fixed-dim": "#76daa2",
+                    "primary": "#2a9462",
+                    "on-primary-fixed": "#002111",
+                    "background": "#fcf9f8",
+                    "on-tertiary-container": "#ffffff",
+                    "on-secondary-fixed": "#161d16",
+                    "secondary": "#596057",
+                    "on-secondary-fixed-variant": "#414940",
+                    "on-surface": "#1c1b1b",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#3e4941",
+                    "on-primary-container": "#f6fff5",
+                    "primary-fixed": "#92f7bc",
+                    "on-tertiary-fixed": "#311300",
+                    "primary-container": "#2a9462",
+                    "on-secondary-container": "#5f665d",
+                    "on-primary-fixed-variant": "#005231",
+                    "inverse-surface": "#313030",
+                    "on-error": "#ffffff",
+                    "surface-container": "#f0eded",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#723600",
+                    "outline": "#6e7a71",
+                    "tertiary": "#f97f08",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-background": "#1c1b1b",
+                    "surface-variant": "#e5e2e1",
+                    "surface-container-low": "#f6f3f2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "gutter": "16px",
+                    "margin": "24px",
+                    "unit": "4px",
+                    "container-padding": "16px",
+                    "stack-md": "16px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "data-mono": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "headline-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "data-mono": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      body { font-family: 'Inter', sans-serif; }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        vertical-align: middle;
+      }
+      .scrollbar-hide::-webkit-scrollbar { display: none; }
+      .square-card { border-radius: 0 !important; }
+      .action-button { border-radius: 9999px !important; }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-64 border-r border-outline-variant bg-surface flex flex-col z-20">
+<div class="p-6">
+<h1 class="font-headline-md text-headline-md text-primary font-bold tracking-tight">RetailOps</h1>
+<p class="text-on-surface-variant font-label-bold text-[10px] uppercase tracking-widest mt-1">Supermarket HQ</p>
+</div>
+<nav class="flex-1 mt-4">
+<a class="flex items-center px-6 py-4 text-on-surface-variant hover:bg-secondary-container transition-colors group" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant group-hover:text-primary">dashboard</span>
+<span class="font-body-md text-body-md">Dashboard</span>
+</a>
+<a class="flex items-center px-6 py-4 text-on-surface-variant hover:bg-secondary-container transition-colors group" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant group-hover:text-primary">inventory_2</span>
+<span class="font-body-md text-body-md">Lotes</span>
+</a>
+<a class="flex items-center px-6 py-4 border-l-4 border-primary bg-secondary-container text-primary font-label-bold" href="#">
+<span class="material-symbols-outlined mr-3">warning</span>
+<span class="font-body-md text-body-md">Anomalias</span>
+</a>
+
+<a class="flex items-center px-6 py-4 text-on-surface-variant hover:bg-secondary-container transition-colors group" href="#">
+<span class="material-symbols-outlined mr-3 text-on-surface-variant group-hover:text-primary">assessment</span>
+<span class="font-body-md text-body-md">Relatórios</span>
+</a>
+</nav>
+<div class="p-6 border-t border-outline-variant flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional warehouse manager portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIl36Xq6wEaKAW-sS8-2I41cfZ2K8bIfmEoTnR6UFcPWg0YWXsQUzWB98-gBJOVSJKJu8eQ7vwk7TUR9Jtg3ePu4PkIcnVhdq3e3FbLEUJd3UzAW0VZxSI6zTM6CAxQwWUxsbLoe5kv6Xe99l9fIohy6JuKJjN9qfzAldyPsALWI3sOugg2HQig6bqn0DBDsIdtvuyKOvXAhDJKXoegHa7eEcGVR_X5nyanloEUUmX5jW1c3aP2hA">
+</div>
+<div>
+<p class="font-label-bold text-on-surface">Gestor Regional</p>
+<p class="text-[10px] text-on-surface-variant uppercase">Unidade DF</p>
+</div>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 left-64 h-16 bg-surface border-b border-outline-variant flex justify-between items-center px-margin z-10">
+<div class="flex items-center gap-4">
+<h2 class="font-headline-md text-headline-md font-bold text-primary">RetailOps Dashboard</h2>
+<span class="h-4 w-[1px] bg-outline-variant mx-2"></span>
+<div class="flex items-center text-primary font-bold border-b-2 border-primary px-1 py-1">
+<span class="material-symbols-outlined text-sm mr-1">location_on</span>
+<span class="font-label-bold">Samambaia/DF</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:scale-95">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:scale-95">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-16 p-margin min-h-screen">
+<!-- Header Section -->
+<section class="mb-stack-lg flex justify-between items-end">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-unit">Gestão de Anomalias e Inventário</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Monitoramento de estoque, perdas e divergências operacionais.</p>
+</div>
+<div class="flex gap-stack-sm">
+
+</div>
+</section>
+<!-- Filter Bar -->
+<section class="mb-stack-lg bg-surface border border-outline-variant p-gutter grid grid-cols-1 md:grid-cols-5 gap-gutter items-end square-card">
+<div class="space-y-unit">
+<label class="font-label-bold text-on-surface-variant block">Filial</label>
+<select class="w-full bg-surface border border-outline-variant px-3 py-2 text-body-md focus:border-primary focus:ring-0 outline-none">
+<option>Todas as Filiais</option>
+<option selected="">Samambaia/DF</option>
+<option>Taguatinga/DF</option>
+</select>
+</div>
+<div class="space-y-unit">
+<label class="font-label-bold text-on-surface-variant block">Período</label>
+<input class="w-full bg-surface border border-outline-variant px-3 py-2 text-body-md focus:border-primary outline-none" type="date" value="2023-10-27">
+</div>
+<div class="space-y-unit">
+<label class="font-label-bold text-on-surface-variant block">Tipo de Alerta</label>
+<select class="w-full bg-surface border border-outline-variant px-3 py-2 text-body-md focus:border-primary outline-none">
+<option>Todos os Alertas</option>
+<option>Estoque Mínimo</option>
+<option>Excesso de Estoque</option>
+<option>Divergência de Inventário</option>
+<option>Anomalia Operacional</option>
+</select>
+</div>
+<div class="space-y-unit">
+<label class="font-label-bold text-on-surface-variant block">Status</label>
+<select class="w-full bg-surface border border-outline-variant px-3 py-2 text-body-md focus:border-primary outline-none">
+<option>Pendentes</option>
+<option>Em Investigação</option>
+<option>Resolvidos</option>
+</select>
+</div>
+<button class="action-button bg-primary text-on-primary h-[42px] px-6 font-label-bold hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+            Aplicar Filtros
+        </button>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-stack-lg">
+<!-- Main List -->
+<div class="lg:col-span-2 space-y-gutter">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-stack-sm flex items-center gap-2">
+                Alertas Ativos
+                <span class="bg-error text-white text-[10px] px-2 py-0.5 rounded-full font-bold">4 ALERTA(S)</span>
+</h4>
+<!-- Alert: Divergência de Inventário (RF024) -->
+<article class="square-card bg-surface border border-outline-variant p-gutter shadow-sm border-l-4 border-l-error">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">difference</span>
+</div>
+<div>
+<h5 class="font-label-bold text-on-surface text-lg">Divergência de Inventário</h5>
+<p class="text-on-surface-variant text-body-md">Filial: Samambaia • ID Contagem: #CC-882</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-error font-headline-md block">-R$ 1.240,00</span>
+<span class="text-on-surface-variant font-label-bold text-[10px] uppercase">Diferença Contábil</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-stack-md py-4 border-y border-outline-variant mb-4">
+<div class="flex flex-col">
+<span class="font-label-bold text-on-surface-variant uppercase text-[10px]">Categoria</span>
+<span class="font-body-lg text-on-surface font-semibold">Laticínios</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-bold text-on-surface-variant uppercase text-[10px]">Impacto Operacional</span>
+<span class="font-body-lg text-error font-semibold">Alto - Ruptura Provável</span>
+</div>
+</div>
+<div class="flex justify-end gap-stack-sm">
+<button class="action-button px-4 py-2 text-on-surface-variant hover:bg-secondary-container font-label-bold transition-colors">Recontar</button>
+<button class="action-button px-6 py-2 bg-primary text-on-primary font-label-bold hover:shadow-lg transition-all">Ajustar Estoque</button>
+</div>
+</article>
+<!-- Alert: Estoque Mínimo (RF009) -->
+<article class="square-card bg-surface border border-outline-variant p-gutter shadow-sm border-l-4 border-l-tertiary">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-tertiary-container/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">trending_down</span>
+</div>
+<div>
+<h5 class="font-label-bold text-on-surface text-lg">Abaixo do Estoque Mínimo</h5>
+<p class="text-on-surface-variant text-body-md">Óleo de Soja 900ml • 15 SKU's afetados</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-tertiary font-headline-md block">12% Restante</span>
+<span class="text-on-surface-variant font-label-bold text-[10px] uppercase">Status de Reposição</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-stack-md py-4 border-y border-outline-variant mb-4">
+<div class="flex flex-col">
+<span class="font-label-bold text-on-surface-variant uppercase text-[10px]">Estoque Atual</span>
+<span class="font-body-lg text-on-surface font-semibold">45 unidades</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-bold text-on-surface-variant uppercase text-[10px]">Ponto de Pedido</span>
+<span class="font-body-lg text-on-surface font-semibold">120 unidades</span>
+</div>
+</div>
+<div class="flex justify-end gap-stack-sm">
+<button class="action-button px-4 py-2 text-on-surface-variant hover:bg-secondary-container font-label-bold transition-colors">Ver Fornecedor</button>
+<button class="action-button px-6 py-2 bg-primary text-on-primary font-label-bold hover:shadow-lg transition-all">Gerar Pedido</button>
+</div>
+</article>
+<!-- Alert: Excesso de Estoque (RF010) -->
+<article class="square-card bg-surface border border-outline-variant p-gutter shadow-sm border-l-4 border-l-primary">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">inventory</span>
+</div>
+<div>
+<h5 class="font-label-bold text-on-surface text-lg">Excesso de Estoque</h5>
+<p class="text-on-surface-variant text-body-md">Bebida Láctea X • Risco de Vencimento</p>
+</div>
+</div>
+<div class="text-right">
+<span class="text-primary font-headline-md block">+150% Acima</span>
+<span class="text-on-surface-variant font-label-bold text-[10px] uppercase">Giro Lento</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-stack-md py-4 border-y border-outline-variant mb-4">
+<div class="flex flex-col">
+<span class="font-label-bold text-on-surface-variant uppercase text-[10px]">Dias de Cobertura</span>
+<span class="font-body-lg text-on-surface font-semibold">45 dias</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-bold text-on-surface-variant uppercase text-[10px]">Sugestão</span>
+<span class="font-body-lg text-primary font-semibold">Ação Promocional</span>
+</div>
+</div>
+<div class="flex justify-end gap-stack-sm">
+<button class="action-button px-6 py-2 border border-primary text-primary font-label-bold hover:bg-secondary-container transition-all">Criar Promoção</button>
+</div>
+</article>
+</div>
+<!-- Sidebar Widgets -->
+<aside class="space-y-gutter">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Resumo de Inventário</h4>
+<!-- Ciclo de Contagem (RF021) -->
+
+<!-- Dashboard de Divergências -->
+<div class="bg-surface border border-outline-variant p-gutter square-card">
+<p class="font-label-bold text-on-surface-variant uppercase text-[10px] mb-4 tracking-widest">Top Causas de Divergência</p>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-body-md">
+<span class="text-on-surface">Erro de Recebimento</span>
+<span class="font-data-mono text-error font-bold">42%</span>
+</div>
+<div class="flex justify-between items-center text-body-md">
+<span class="text-on-surface">Avaria Não Registrada</span>
+<span class="font-data-mono text-tertiary font-bold">28%</span>
+</div>
+<div class="flex justify-between items-center text-body-md">
+<span class="text-on-surface">Furto Identificado</span>
+<span class="font-data-mono text-on-surface-variant font-bold">15%</span>
+</div>
+<div class="flex justify-between items-center text-body-md">
+<span class="text-on-surface">Erro de PDV</span>
+<span class="font-data-mono text-primary font-bold">15%</span>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant">
+<button class="w-full action-button py-2 border border-primary text-primary font-label-bold hover:bg-secondary-container transition-all">Ver Relatório Completo</button>
+</div>
+</div>
+<!-- Quick Stats -->
+<div class="bg-primary p-gutter text-on-primary square-card flex flex-col justify-between aspect-[4/3]">
+<div>
+<span class="font-label-bold uppercase tracking-widest opacity-80">Acuracidade Global</span>
+<h5 class="font-headline-lg text-headline-lg mt-2">94.2%</h5>
+<p class="text-body-md opacity-90 mt-1">Meta: 98% para Q4</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined">trending_up</span>
+<span class="font-label-bold">+2.1% vs Mês Anterior</span>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<script>
+    // Simple ripple/click effect for buttons
+    document.querySelectorAll('button').forEach(button => {
+        button.addEventListener('mousedown', function(e) {
+            this.classList.add('scale-95');
+        });
+        button.addEventListener('mouseup', function(e) {
+            this.classList.remove('scale-95');
+        });
+        button.addEventListener('mouseleave', function(e) {
+            this.classList.remove('scale-95');
+        });
+    });
+</script>
+
+
+</body></html>
