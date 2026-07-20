@@ -23,7 +23,7 @@ MVP de um sistema com IA para **controle de validade, prevenção de perdas e de
 - `ATIVIDADE.md` — descrição detalhada do problema
 - `CHANGELOG.md` — histórico de alterações do projeto
 
-### `frontend/` — Aplicação React (Vite + TypeScript + Tailwind CSS)
+### `mvp/frontend/` — Aplicação React (Vite + TypeScript + Tailwind CSS)
 
 Protótipo funcional do MVP com as seguintes páginas:
 
@@ -42,7 +42,7 @@ Protótipo funcional do MVP com as seguintes páginas:
 Para executar:
 
 ```bash
-cd frontend
+cd mvp/frontend
 npm install
 npm run dev
 ```
