@@ -10,7 +10,8 @@
 
 - `frontend/` — rota raiz `/` agora redireciona para `/login` (página de login como landing page)
 - `frontend/` — Dashboard movido para `/dashboard`; link na Sidebar atualizado
-- `alaide/`, `ed/`, `william/` movidos para dentro de `individual/`
+- `alaide/`, `ed/`, `william/` movidos para dentro de `individual/` e removidos da raiz
+- `README.md` — paths atualizados para `individual/` e rota do Dashboard corrigida para `/dashboard`
 
 ## [1.8.0] — 2026-07-20
 

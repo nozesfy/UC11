@@ -12,9 +12,9 @@ MVP de um sistema com IA para **controle de validade, prevenção de perdas e de
 
 | Membro | Papel | Pasta |
 |--------|-------|-------|
-| William | Front-end e Banco de Dados | `william/` |
-| Alaide | UI/UX | `alaide/` |
-| Ed | Back-end, DevOps e Documentação | `ed/` |
+| William | Front-end e Banco de Dados | `individual/william/` |
+| Alaide | UI/UX | `individual/alaide/` |
+| Ed | Back-end, DevOps e Documentação | `individual/ed/` |
 
 ## Estrutura do Repositório
 
@@ -32,7 +32,7 @@ Protótipo funcional do MVP com as seguintes páginas:
 | `/login` | Login | Autenticação com CPF (máscara + validação) e senha |
 | `/cadastro` | Cadastro | Registro de novo usuário com validação completa |
 | `/esqueceu-senha` | Recuperar Senha | Recuperação de senha via CPF e e-mail |
-| `/` | Dashboard | KPIs, heatmap de risco, alertas de estoque, predições IA |
+| `/dashboard` | Dashboard | KPIs, heatmap de risco, alertas de estoque, predições IA |
 | `/lote/:id` | Detalhe do Lote | Informações do lote, ações sugeridas, recomendações de ML |
 | `/anomalias` | Anomalias | Gestão de anomalias com detecção inteligente por IA |
 | `/relatorios` | Relatório Mensal | KPIs fiscais, faturamento por filial, análise preditiva |
@@ -76,8 +76,8 @@ npm run dev
 - `lgpd-conformidade.md` — mapeamento LGPD
 - `estrutura-projeto.md` — estrutura de diretórios e convenções
 
-### Pastas Individuais
+### `individual/` — Artefatos Individuais
 
-- `william/` — personas, mapas de empatia, matriz CSD e requisitos individuais
-- `alaide/` — personas, mapas de empatia, matriz CSD e requisitos individuais
-- `ed/` — personas, mapas de empatia, matriz CSD e requisitos individuais
+- `individual/william/` — personas, mapas de empatia, matriz CSD e requisitos individuais
+- `individual/alaide/` — personas, mapas de empatia, matriz CSD e requisitos individuais
+- `individual/ed/` — personas, mapas de empatia, matriz CSD e requisitos individuais
