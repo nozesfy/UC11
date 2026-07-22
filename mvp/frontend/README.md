@@ -16,10 +16,38 @@ Protótipo funcional do sistema de **Gestão de Perdas** para a rede Atacadão.
 | `/login` | Login | Autenticação com CPF (máscara + validação) e senha |
 | `/cadastro` | Cadastro | Registro de novo usuário |
 | `/esqueceu-senha` | Recuperar Senha | Recuperação via CPF e e-mail |
-| `/` | Dashboard | KPIs, heatmap de risco, alertas e predições IA |
+| `/dashboard` | Dashboard | KPIs, heatmap de risco, alertas e predições IA |
 | `/lote/:id` | Detalhe do Lote | Informações, ações sugeridas e recomendações de ML |
 | `/anomalias` | Anomalias | Gestão de anomalias com detecção inteligente |
 | `/relatorios` | Relatório Mensal | KPIs fiscais, faturamento e análise preditiva |
+
+## Validação de Formulários
+
+Todas as validações são feitas **no frontend** (utils/validators.ts) no momento da submissão, com feedback visual por campo (borda vermelha + mensagem de erro).
+
+### Login (`/login`)
+
+| Campo | Validações |
+|-------|-----------|
+| CPF | Máscara `000.000.000-00` via `formatCpf`; obrigatório; valida dígitos verificadores via `isValidCpf` |
+| Senha | Obrigatória; mínimo 4 caracteres |
+
+### Cadastro (`/cadastro`)
+
+| Campo | Validações |
+|-------|-----------|
+| Nome completo | Obrigatório; não pode ser vazio |
+| E-mail | Obrigatório; regex `/\S+@\S+\.\S+/` |
+| CPF | Máscara `000.000.000-00` via `formatCpf`; obrigatório; valida dígitos verificadores via `isValidCpf` |
+| Senha | Obrigatória; mínimo 6 caracteres |
+| Confirmar senha | Deve ser idêntica ao campo Senha |
+
+### Recuperar Senha (`/esqueceu-senha`)
+
+| Campo | Validações |
+|-------|-----------|
+| CPF | Máscara `000.000.000-00` via `formatCpf`; obrigatório; valida dígitos verificadores via `isValidCpf` |
+| E-mail | Obrigatório; regex `/\S+@\S+\.\S+/` |
 
 ## Funcionalidades de IA (simuladas)
 
