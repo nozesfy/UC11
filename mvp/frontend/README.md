@@ -55,8 +55,8 @@ O deploy é automático via GitHub Actions. A cada push na branch `main` que alt
 1. O workflow em `.github/workflows/deploy.yml` faz o build do Vite
 2. O artefato `dist/` é publicado no GitHub Pages
 
-**URL de produção:** `https://nozesfy.github.io/UC11/`
+**URL de produção:** `https://senacsystemsdev.github.io/UC11/`
 
 Para acionar manualmente o deploy, vá em **Actions → Deploy Frontend to GitHub Pages → Run workflow**.
 
-> ⚠️ O `base` configurado no `vite.config.ts` é `/UC11/` para corresponder ao nome do repositório.
+> ⚠️ O `base` no `vite.config.ts` é `'./'` (caminhos relativos) e o `<BrowserRouter>` em `main.tsx` usa `basename="/UC11"` para匹配 as rotas no subdiretório do GitHub Pages.
