@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.8.1] — 2026-07-22
+
+### Corrigido
+
+- `frontend/` — página em branco no GitHub Pages: `BrowserRouter` sem `basename` fazia o React Router não匹配 as rotas quando o site está em subdiretório (`/UC11/`)
+
 ## [1.8.0] — 2026-07-20
 
 ### Adicionado

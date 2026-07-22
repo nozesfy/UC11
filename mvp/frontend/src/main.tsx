@@ -14,7 +14,7 @@ createRoot(document.getElementById('root')!).render(
   // StrictMode ativa checagens extras em desenvolvimento
   <StrictMode>
     {/* BrowserRouter fornece o contexto de roteamento para toda a app */}
-    <BrowserRouter>
+    <BrowserRouter basename="/UC11">
       <App />
     </BrowserRouter>
   </StrictMode>,
