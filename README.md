@@ -20,8 +20,11 @@ MVP de um sistema com IA para **controle de validade, prevenção de perdas e de
 
 ### Raiz
 
-- `ATIVIDADE.md` — descrição detalhada do problema
 - `CHANGELOG.md` — histórico de alterações do projeto
+
+## Branches
+
+Trabalhamos diretamente na branch `main` (projeto acadêmico, sem necessidade de Git Flow).
 
 ### `mvp/frontend/` — Aplicação React (Vite + TypeScript + Tailwind CSS)
 
