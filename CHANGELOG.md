@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.14.0] — 2026-07-23
+
+### Adicionado
+
+- `frontend/` — animação de barras no `HeatmapRisco` com Intersection Observer: as barras de "Risco de Perda por Categoria" só começam a carregar quando o usuário scrolla até a seção
+
 ## [1.13.0] — 2026-07-23
 
 ### Adicionado
