@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0] — 2026-07-23
+
+### Corrigido
+
+- `frontend/` — navegação direta para rotas SPA (`/login`, `/cadastro`, etc.) no GitHub Pages resultava em 404; adicionado `404.html` (cópia do `index.html`) via pós-build para fallback SPA
+- `frontend/` — assets quebravam em rotas aninhadas no GitHub Pages por causa do `base: './'` (caminho relativo); alterado para `base: '/UC11/'` em produção (caminho absoluto)
+
 ## [1.10.0] — 2026-07-23
 
 ### Adicionado
