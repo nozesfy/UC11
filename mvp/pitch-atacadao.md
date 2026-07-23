@@ -9,7 +9,7 @@
 
 ## Slide 1 — Abertura (1 min)
 
-**Fala:** "Somos a equipe UC11. Nosso cliente é o Atacadão, uma das maiores redes atacadistas do Brasil, com presença nacional e operação em Camaçari. Nosso desafio foi transformar um problema crítico de perdas em uma oportunidade de inovação com IA."
+**Fala:** "Somos a equipe do Projeto de Controle de Validade com IA. Nosso cliente é o Atacadão, uma das maiores redes atacadistas do Brasil, com presença nacional e operação em Camaçari. Nosso desafio foi transformar um problema crítico de perdas em uma oportunidade de inovação com IA."
 
 **Equipe:**
 - **William** — Frontend e Banco de Dados

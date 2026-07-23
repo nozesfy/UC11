@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.12.0] — 2026-07-23
+
+### Alterado
+
+- `mvp/pitch-atacadao.md` — fala do Slide 1 alterada de "Somos a equipe UC11" para "Somos a equipe do Projeto de Controle de Validade com IA"
+
 ## [1.11.0] — 2026-07-23
 
 ### Alterado
