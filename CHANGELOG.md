@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.13.0] — 2026-07-23
+
+### Adicionado
+
+- `frontend/` — prop `autoScan` no componente `AiInsights` dispara análise de IA automaticamente ao carregar a página, sem necessidade de clique no botão "ANALISAR COM IA"
+
+### Alterado
+
+- `frontend/` — todas as páginas com IA (Dashboard, Anomalias, Detalhe do Lote, Relatório Mensal) agora executam a análise preditiva automaticamente ao montar o componente
+
 ## [1.12.0] — 2026-07-23
 
 ### Alterado

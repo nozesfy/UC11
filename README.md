@@ -41,7 +41,7 @@ Protótipo funcional do MVP com as seguintes páginas:
 | `/anomalias` | Anomalias | Gestão de anomalias com detecção inteligente por IA |
 | `/relatorios` | Relatório Mensal | KPIs fiscais, faturamento por filial, análise preditiva |
 
-**Funcionalidades simuladas com IA:** análise preditiva de perdas, detecção de anomalias, recomendações de precificação dinâmica, realocação inteligente e otimização fiscal — com barra de progresso, nível de confiança do modelo e badges de prioridade.
+**Funcionalidades simuladas com IA:** análise preditiva de perdas, detecção de anomalias, recomendações de precificação dinâmica, realocação inteligente e otimização fiscal — executadas automaticamente ao carregar a página, com barra de progresso, nível de confiança do modelo e badges de prioridade.
 
 Para executar:
 
