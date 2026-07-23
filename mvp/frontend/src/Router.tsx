@@ -16,13 +16,12 @@ export default function Router() {
   return (
     <Routes>
       {/* Rotas sem sidebar nem header */}
-      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Navigate to="/" replace />} />
       <Route path="/cadastro" element={<Cadastro />} />
       <Route path="/esqueceu-senha" element={<EsqueceuSenha />} />
       {/* Layout envolvendo as rotas protegidas (com sidebar) */}
       <Route element={<Layout />}>
-        {/* Rota raiz → redireciona para o login */}
-        <Route path="/" element={<Navigate to="/login" replace />} />
         {/* Dashboard */}
         <Route path="/dashboard" element={<Dashboard />} />
         {/* Rota de detalhe do lote com parâmetro :id */}
