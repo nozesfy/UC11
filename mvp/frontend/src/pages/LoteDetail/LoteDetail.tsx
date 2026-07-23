@@ -150,6 +150,7 @@ export default function LoteDetail() {
           {/* Recomendações geradas por IA para este lote específico */}
           <AiInsights
             titulo="Recomendações de ML para este Lote"
+            autoScan
             insights={[
               {
                 titulo: 'Precificação Dinâmica',

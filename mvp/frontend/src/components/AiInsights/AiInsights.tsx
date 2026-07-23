@@ -12,6 +12,7 @@ interface AiInsightsProps {
   titulo: string
   insights: AiInsight[]
   onScanComplete?: () => void
+  autoScan?: boolean
 }
 
 function ImpactoBadge({ impacto }: { impacto: AiInsight['impacto'] }) {
@@ -27,11 +28,19 @@ function ImpactoBadge({ impacto }: { impacto: AiInsight['impacto'] }) {
   )
 }
 
-export default function AiInsights({ titulo, insights, onScanComplete }: AiInsightsProps) {
+export default function AiInsights({ titulo, insights, onScanComplete, autoScan }: AiInsightsProps) {
   const [scanning, setScanning] = useState(false)
   const [progresso, setProgresso] = useState(0)
   const [exibidos, setExibidos] = useState<number[]>([])
   const timerRef = useRef<ReturnType<typeof setInterval>>(undefined)
+  const iniciado = useRef(false)
+
+  useEffect(() => {
+    if (autoScan && !iniciado.current) {
+      iniciado.current = true
+      iniciarScan()
+    }
+  }, [autoScan])
 
   const iniciarScan = () => {
     setScanning(true)

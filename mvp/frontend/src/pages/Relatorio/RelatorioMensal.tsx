@@ -37,6 +37,7 @@ export default function RelatorioMensal() {
       <div className="mb-stack-lg">
         <AiInsights
           titulo="Análise Preditiva — ML"
+          autoScan
           insights={[
             {
               titulo: 'Projeção de Perda — Agosto/2026',

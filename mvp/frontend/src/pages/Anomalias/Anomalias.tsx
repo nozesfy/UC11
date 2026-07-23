@@ -63,6 +63,7 @@ export default function Anomalias() {
       <div className="mb-stack-lg">
         <AiInsights
           titulo="Detecção Inteligente de Anomalias"
+          autoScan
           insights={[
             {
               titulo: 'Divergência Sistêmica — Laticínios',

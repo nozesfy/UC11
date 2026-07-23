@@ -37,6 +37,7 @@ export default function AiPredictions() {
       <AiInsights
         titulo="Análise Preditiva — Machine Learning"
         insights={insightsPrevisao}
+        autoScan
       />
     </div>
   )
